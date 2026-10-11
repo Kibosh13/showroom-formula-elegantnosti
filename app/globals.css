@@ -8,7 +8,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 /* Keep the model's face visible in the wide editorial crop. */
 .hero>img{object-position:center 8%}.hero-note{display:none}
-@media(max-width:760px){.hero>img{object-position:60% 8%}}
+@media(max-width:760px){.hero>img{object-position:75% 8%}}
 /* A lower text block gives fashion photography room on a phone. */
 @media(max-width:760px){.hero{height:650px}.hero:after{background:linear-gradient(180deg,transparent 12%,#f1e7da10 35%,#f1e7dac9 57%,#f1e7daf2 85%)}.hero-copy{left:6%;right:6%;top:auto;bottom:43px;max-width:none}.hero-copy .eyebrow{font-size:9px;letter-spacing:1.3px;max-width:none;margin-bottom:11px}.hero h1{font-size:44px;line-height:1.04;letter-spacing:-.6px}.hero-copy p{font-size:14px;margin-top:14px}.hero-buttons{margin-top:18px;flex-direction:row;align-items:stretch;gap:9px}.hero-buttons .button{font-size:11px;padding:9px 12px;min-height:40px;gap:9px;width:auto;flex:1}.hero-index{bottom:17px;font-size:10px}.hero-index span{font-size:9px;letter-spacing:1px}}
 @media(max-width:400px){.hero h1{font-size:41px}.hero-buttons .button{font-size:11px;padding:9px 10px;gap:7px}.hero-copy{left:5.5%;right:5.5%}}
@@ -33,7 +33,7 @@
  .header .header-book{min-width:108px;font-size:11px;min-height:43px;padding:8px 11px;margin:0 4px}
  .header-actions>.icon-button{width:37px;min-width:37px;height:44px}
  .header-actions{gap:1px}
- .hero>img{object-position:60% 8%}
+ .hero>img{object-position:75% 8%}
  .hero-copy .eyebrow{font-size:10px;letter-spacing:1.1px}
  .hero-copy p{font-size:14px}
  .hero-buttons .button{font-size:11px;min-height:47px;gap:8px;padding:10px 11px}
