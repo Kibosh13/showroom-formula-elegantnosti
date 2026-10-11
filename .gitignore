@@ -58,3 +58,23 @@ next-env.d.ts
 .dev.vars*
 !.env.example
 *.tsbuildinfo
+
+# Private databases, local demo builds and temporary artefacts
+/dist-demo/
+/.demo-render/
+/.cache/
+/tmp/
+/temp/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.log
+*.tmp
+*.swp
+*.zip
+*.tar
+*.tar.gz
+*.key
+Thumbs.db
