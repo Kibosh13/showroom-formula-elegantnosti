@@ -1,22 +1,13 @@
 Изображения для Формулы Элегантности
 Способ: встроенный инструмент ImageGen, без CLI/API fallback.
-Итоговые файлы: public/images/hero-editorial-v2.webp, public/images/catalogue.webp,
+Итоговые файлы: public/images/hero-classic-v3.webp, public/images/catalogue.webp,
 public/images/space.webp. Исходные PNG сохранялись инструментом ImageGen;
 для сайта выполнена только конвертация в WebP. Панели каталога отображаются
 через SVG viewport, изображение не перерисовывается.
 
-HERO V2 — public/images/hero-editorial-v2.webp
-Use case: photorealistic-natural.
-Asset type: original editorial fashion hero photograph for the Russian women's classic clothing showroom "Формула Элегантности".
-Primary request: Create a completely new photograph, clearly unlike the previous seated dark-haired woman in a burgundy suit on a brown lounge chair. Do NOT reuse any previous image or person. This is a fresh independent campaign photograph.
-Scene/backdrop: minimalist contemporary private fashion showroom with warm pale beige plaster walls, a tall softly lit window off-frame, a simple travertine architectural ledge, subtle diagonal daylight shadows. Clean quiet space, not an ornate hotel or palace.
-Subject: ONE original adult woman approximately 38–45, with distinctive chin-length straight dark-blonde bob haircut with a subtle side part, natural fair skin, approachable confident expression. She is STANDING, lightly angled toward the camera, her head turned slightly toward the left, arms relaxed naturally, hands away from her face. Different facial features from any previous campaign. She wears a beautifully tailored light taupe long blazer over an ivory silk blouse and dark chocolate wide-leg classic trousers. Elegant, credible wardrobe styling, no flashy jewelry.
-Style/medium: photorealistic premium contemporary fashion editorial, natural skin pores, believable fabric drape, restrained luxury, refined neutral tones, medium-format photographic realism.
-Composition/framing: wide landscape 16:9. Put the woman on the RIGHT side, centered around 74% of image width; her face around 23% from top. Frame from just above head to below knees. The LEFT 53% is quiet uninterrupted light beige negative space for website text. Keep generous space above her head, silhouette readable at mobile crop. Subject stands independently; no furniture behind or in front of her.
-Lighting/mood: soft natural morning window light, calm and sophisticated, moderate contrast, warm neutral color balance, subtle shadows.
-Palette: warm ivory, sand beige, taupe, dark chocolate. Clothing and room complement a burgundy-accent website.
-Text: none. No lettering, logo, watermark or border.
-Avoid: burgundy suit, seated pose, hand under chin or touching the face, brown leather chair or sofa, long wavy dark brunette hair, gilded moldings, ornate wall panels, marble columns, excessive beauty retouching, other people, mannequins, duplicated fingers.
+HERO — public/images/hero-classic-v3.webp
+Прежнее изображение восстановлено из истории проекта без перегенерации.
+Use case: photorealistic-natural. Asset type: wide website hero photograph for a Moscow women's classic fashion showroom. Primary request: quiet luxury editorial photograph of an elegant brunette woman aged 40 in a beautifully tailored deep burgundy pantsuit, sitting on a dark brown leather chair in a classic warm beige Parisian-style interior, looking thoughtfully to the left. Composition: landscape 3:2, woman occupies the rightmost half, ample clean softly lit beige wall and ivory curtains on left for text overlay, frame from knees upward, face clear and naturally beautiful, no text. Warm natural window light, tactile fabrics, realistic skin, muted colors, premium magazine fashion photography, dark brown and burgundy accents, calm strict minimalist elegance. No logos, no text, no watermark.
 
 
 CATALOGUE
