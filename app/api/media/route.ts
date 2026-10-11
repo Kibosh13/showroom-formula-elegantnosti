@@ -1,0 +1,3 @@
+import {env} from 'cloudflare:workers';
+import {isAdmin,sameOrigin} from '../../admin-auth';
+export async function POST(req:Request){if(!sameOrigin(req)||!await isAdmin(req))return Response.json({error:'Нет доступа'},{status:403});try{const data=await req.formData();const file=data.get('file') as File;if(!file||!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>8*1024*1024)return Response.json({error:'Выберите JPEG, PNG или WebP до 8 МБ'},{status:400});const key=crypto.randomUUID();await env.BUCKET!.put(key,await file.arrayBuffer(),{httpMetadata:{contentType:file.type}});return Response.json({url:`/media/${key}`});}catch{return Response.json({error:'Не удалось загрузить изображение'},{status:503});}}

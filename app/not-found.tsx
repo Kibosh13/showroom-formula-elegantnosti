@@ -1,0 +1,1 @@
+export default function NotFound(){return <main style={{textAlign:'center',padding:'100px 20px'}}><p>ФОРМУЛА ЭЛЕГАНТНОСТИ</p><h1 style={{margin:'20px'}}>Страница не найдена</h1><a className="button" href="/catalog">Перейти в каталог</a></main>}

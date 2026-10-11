@@ -1,0 +1,4 @@
+import { sqliteTable, text } from 'drizzle-orm/sqlite-core';
+export const entities = sqliteTable('entities', { id: text('id').primaryKey(), kind: text('kind').notNull(), payload: text('payload').notNull(), updatedAt: text('updated_at').notNull() });
+export const leads = sqliteTable('leads', { id: text('id').primaryKey(), kind: text('kind').notNull(), name: text('name').notNull(), phone: text('phone').notNull(), payload: text('payload').notNull(), status: text('status').notNull().default('Новая'), createdAt: text('created_at').notNull(), notification: text('notification').notNull().default('Не подключены') });
+export const events = sqliteTable('events', { id: text('id').primaryKey(), name: text('name').notNull(), createdAt: text('created_at').notNull() });

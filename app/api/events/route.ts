@@ -1,0 +1,3 @@
+import {db} from '../../store';
+const names=['view_catalog','select_category','apply_filter','view_item','view_look','view_capsule','click_fitting','submit_lead','click_messenger','click_phone','click_route','certificate_request'];
+export async function POST(req:Request){try{if(req.headers.get('origin')&&req.headers.get('origin')!==new URL(req.url).origin)return new Response(null,{status:403});const b:any=await req.json();if(!names.includes(b.name))return new Response(null,{status:400});await db().prepare('INSERT INTO events(id,name,created_at) VALUES(?,?,?)').bind(crypto.randomUUID(),b.name,new Date().toISOString()).run();return new Response(null,{status:204});}catch{return new Response(null,{status:503});}}

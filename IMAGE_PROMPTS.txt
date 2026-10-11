@@ -1,0 +1,15 @@
+Изображения для Формулы Элегантности
+Способ: встроенный инструмент ImageGen, без CLI/API fallback.
+Итоговые файлы: public/images/hero.webp, public/images/catalogue.webp,
+public/images/space.webp. Исходные PNG сохранялись инструментом ImageGen;
+для сайта выполнена только конвертация в WebP. Панели каталога отображаются
+через SVG viewport, изображение не перерисовывается.
+
+HERO
+Use case: photorealistic-natural. Asset type: wide website hero photograph for a Moscow women's classic fashion showroom. Primary request: quiet luxury editorial photograph of an elegant brunette woman aged 40 in a beautifully tailored deep burgundy pantsuit, sitting on a dark brown leather chair in a classic warm beige Parisian-style interior, looking thoughtfully to the left. Composition: landscape 3:2, woman occupies the rightmost half, ample clean softly lit beige wall and ivory curtains on left for text overlay, frame from knees upward, face clear and naturally beautiful, no text. Warm natural window light, tactile fabrics, realistic skin, muted colors, premium magazine fashion photography, dark brown and burgundy accents, calm strict minimalist elegance. No logos, no text, no watermark.
+
+CATALOGUE
+Use case: product-mockup. Asset type: editorial fashion contact sheet for a demonstration women's classical clothing catalogue. Create one 3-column by 2-row contact sheet, six equal perfectly rectangular panels with no gaps or borders. Each panel is a separate polished studio full-length fashion photo on consistent warm pale beige background. Every model is an elegant adult woman 35-45 years, natural proportions and realistic skin. Top row from left: brunette wearing burgundy tailored blazer and matching trousers over burgundy top; blonde wearing ivory silky blouse with dark brown wide-leg trousers; brunette wearing dark chocolate elegant ankle-length dress. Bottom row from left: brunette wearing charcoal tailored classic suit; blonde wearing camel wool trench coat with ivory outfit; brunette wearing taupe fine-knit cardigan with beige midi skirt. Photoreal high fashion catalogue photography, diffuse daylight, calm minimal styling, each garment visible from head to toe, no accessories hiding outfits. No text, no logos, no graphic elements, no watermark. Contact sheet itself high resolution 3:2 landscape.
+
+SPACE
+Use case: photorealistic-natural. Asset type: website atmosphere image for a private women's classic fashion showroom. Primary request: tasteful quiet beige women's clothing showroom with dark walnut racks displaying a small capsule of ivory, camel, chocolate and burgundy tailored womenswear on wooden hangers; one cream armchair, arched mirror, warm stone floor, glimpse of a makeup vanity with round light bulbs in the background. Wide landscape photograph, warm natural light, beautifully composed, minimalist expensive classic interior, genuine material texture, no people, no signs, no text, no logos, no watermark. This is a concept visualization, not a photo of an actual business.
