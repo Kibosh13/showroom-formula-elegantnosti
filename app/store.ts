@@ -1,18 +1,18 @@
 import { env } from 'cloudflare:workers';
-import { demoProducts, demoLooks, defaultSettings } from './data';
+import { catalogueProducts, collectionLooks, defaultSettings } from './data';
 import type {Product, Look, Settings} from './data';
 export async function loadStore(){
- let products=demoProducts, looks=demoLooks, settings=defaultSettings, reviews:any[]=[];
+ let products=catalogueProducts, looks=collectionLooks, settings=defaultSettings, reviews:any[]=[];
  try {
   const data=await env.DB!.prepare('SELECT id, kind, payload FROM entities').all<{id:string;kind:string;payload:string}>();
   const rows=data.results || [];
   const overrides=new Map(rows.filter(r=>r.kind==='product').map(r=>[r.id,JSON.parse(r.payload)]));
-  products=[...demoProducts.map(p=>overrides.get(p.id)||p),...Array.from(overrides.values()).filter((p:any)=>!demoProducts.some(d=>d.id===p.id))];
+  products=[...catalogueProducts.map(p=>overrides.get(p.id)||p),...Array.from(overrides.values()).filter((p:any)=>!p.demo&&!catalogueProducts.some(d=>d.id===p.id))];
   const lo=new Map(rows.filter(r=>r.kind==='look').map(r=>[r.id,JSON.parse(r.payload)]));
-  looks=[...demoLooks.map(p=>lo.get(p.id)||p),...Array.from(lo.values()).filter((p:any)=>!demoLooks.some(d=>d.id===p.id))];
+  looks=[...collectionLooks.map(p=>lo.get(p.id)||p),...Array.from(lo.values()).filter((p:any)=>!collectionLooks.some(d=>d.id===p.id))];
   const config=rows.find(r=>r.kind==='settings'); if(config) settings={...defaultSettings,...JSON.parse(config.payload)};
   reviews=rows.filter(r=>r.kind==='review').map(r=>({id:r.id,...JSON.parse(r.payload)})).filter(r=>r.published);
- } catch{ console.error('Catalogue data unavailable; serving demo content'); }
+ } catch{ console.error('Catalogue data unavailable; serving imported catalogue'); }
  return {products:products as Product[],looks:looks as Look[],settings:settings as Settings,reviews};
 }
 export function db(){if(!env.DB)throw new Error('DB unavailable');return env.DB;}

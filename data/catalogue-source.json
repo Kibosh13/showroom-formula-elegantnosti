@@ -1,0 +1,1643 @@
+{
+  "importedAt": "2026-10-13",
+  "originalImageCount": 308,
+  "models": [
+    {
+      "id": "fe-001",
+      "name": "Жакет приталенный, пыльная роза",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "2C6A9F53-06E0-4F66-B3ED-3A9DAAF3F240.PNG",
+        "01497CF7-0D18-4E6E-94A9-0906EF1DF506.PNG",
+        "D67A89FB-5577-4213-8B35-F5D1B151F9B8.PNG"
+      ],
+      "images": [
+        "/images/products/fe-001-01.webp",
+        "/images/products/fe-001-02.webp",
+        "/images/products/fe-001-03.webp"
+      ]
+    },
+    {
+      "id": "fe-002",
+      "name": "Юбка карандаш с разрезом, графит",
+      "category": "Юбки",
+      "article": "",
+      "sources": [
+        "2E290140-F55D-4182-AFC2-C8062CB12C53.PNG",
+        "2DC49C0C-DABF-46F9-84B0-7C64ED7646CE.PNG",
+        "5315C2B8-482C-4075-ADB6-0F6F7F4B7761 2.PNG"
+      ],
+      "images": [
+        "/images/products/fe-002-01.webp",
+        "/images/products/fe-002-02.webp",
+        "/images/products/fe-002-03.webp"
+      ]
+    },
+    {
+      "id": "fe-003",
+      "name": "Юбка карандаш с разрезом, тёмно-синяя",
+      "category": "Юбки",
+      "article": "",
+      "sources": [
+        "0614A9E4-7E78-4FF5-820C-4FF0BCC319D2.PNG",
+        "510C7D07-99AA-404B-8A8A-8567F2C5F91D.PNG"
+      ],
+      "images": [
+        "/images/products/fe-003-01.webp",
+        "/images/products/fe-003-02.webp"
+      ]
+    },
+    {
+      "id": "fe-004",
+      "name": "Юбка миди с разрезом, чёрная",
+      "category": "Юбки",
+      "article": "",
+      "sources": [
+        "8ED89220-B711-4A1B-9247-44C65ED4827C.PNG",
+        "0E02F1B7-2A3C-4122-B7D2-E6C4BBA1B1D4.PNG",
+        "D832847B-2D92-47F8-8934-494BF0718241.PNG"
+      ],
+      "images": [
+        "/images/products/fe-004-01.webp",
+        "/images/products/fe-004-02.webp",
+        "/images/products/fe-004-03.webp"
+      ]
+    },
+    {
+      "id": "fe-005",
+      "name": "Рубашка в мелкую клетку",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "C6C205D2-3635-422F-8B0D-D16E3CB597F4.PNG",
+        "AE89DEDC-AE16-4569-94D8-48334B1AB74A 2.PNG",
+        "F79BB9D0-6D57-47DB-B301-21C819AA01D6.PNG",
+        "0940D273-AB86-42D4-A558-B51457EA5623.PNG",
+        "95F21821-E18B-4BEC-9D2C-9B0B530A02A5.PNG"
+      ],
+      "images": [
+        "/images/products/fe-005-01.webp",
+        "/images/products/fe-005-02.webp",
+        "/images/products/fe-005-03.webp",
+        "/images/products/fe-005-04.webp",
+        "/images/products/fe-005-05.webp"
+      ]
+    },
+    {
+      "id": "fe-006",
+      "name": "Жакет с поясом, шоколадный",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "2C723A1C-39BC-48E7-BE6B-B37AC80F8E72.PNG",
+        "B02F3B42-E50C-4F27-9194-A92F3C59F85B.PNG",
+        "0E4ADBD9-3671-4BF6-94C7-15F7A21C9819.PNG"
+      ],
+      "images": [
+        "/images/products/fe-006-01.webp",
+        "/images/products/fe-006-02.webp",
+        "/images/products/fe-006-03.webp"
+      ]
+    },
+    {
+      "id": "fe-007",
+      "name": "Топ с цельнокроеным рукавом, розовый",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "50000418-A004-4678-929F-81828962BE47.PNG",
+        "14382EDE-6BBF-4EB7-9488-A90F4635A271.PNG"
+      ],
+      "images": [
+        "/images/products/fe-007-01.webp",
+        "/images/products/fe-007-02.webp"
+      ]
+    },
+    {
+      "id": "fe-008",
+      "name": "Топ с цельнокроеным рукавом, голубой",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "B0D1483D-C1E5-438E-8F70-1F4C2306F0B2.PNG"
+      ],
+      "images": [
+        "/images/products/fe-008-01.webp"
+      ]
+    },
+    {
+      "id": "fe-009",
+      "name": "Топ с цельнокроеным рукавом, оливковый",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "C3F9FD70-B3A2-44C3-944E-8BC70516030C.PNG"
+      ],
+      "images": [
+        "/images/products/fe-009-01.webp"
+      ]
+    },
+    {
+      "id": "fe-010",
+      "name": "Топ с цельнокроеным рукавом, чёрный",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "F7295704-716A-4E85-B409-8F1FB744CBB8.PNG"
+      ],
+      "images": [
+        "/images/products/fe-010-01.webp"
+      ]
+    },
+    {
+      "id": "fe-011",
+      "name": "Платье миди с мелким принтом",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "B7D3B59C-3535-45CD-88FA-C00F20BA6319.PNG",
+        "288611A4-0D3A-4DB8-B627-3B759A7CA8B1.PNG",
+        "IMG_0416.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-011-01.webp",
+        "/images/products/fe-011-02.webp",
+        "/images/products/fe-011-03.webp"
+      ]
+    },
+    {
+      "id": "fe-012",
+      "name": "Платье миди с принтом, серо-коричневое",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0418.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-012-01.webp"
+      ]
+    },
+    {
+      "id": "fe-013",
+      "name": "Джемпер свободного кроя, шоколадный",
+      "category": "Трикотаж",
+      "article": "",
+      "sources": [
+        "F9F37156-9B14-4C02-8847-78B292083B67.PNG",
+        "6F43FEE5-9FC2-4739-A40E-2B6CAFB8243E.PNG",
+        "87D87DF9-BC24-4B57-BF91-6EEA9FFF739A.PNG",
+        "9DE39ACE-7BD6-4C6A-A62F-B8A29AA1DE36.PNG"
+      ],
+      "images": [
+        "/images/products/fe-013-01.webp",
+        "/images/products/fe-013-02.webp",
+        "/images/products/fe-013-03.webp",
+        "/images/products/fe-013-04.webp"
+      ]
+    },
+    {
+      "id": "fe-014",
+      "name": "Жакет в мелкую клетку, тёмно-синий",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "9E9406F8-3A20-434E-8C42-FAC04AA8CFDA.PNG",
+        "73B504BF-6054-4147-AF69-93AC6691C79A.PNG"
+      ],
+      "images": [
+        "/images/products/fe-014-01.webp",
+        "/images/products/fe-014-02.webp"
+      ]
+    },
+    {
+      "id": "fe-015",
+      "name": "Жакет классического кроя, серый",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0656.WEBP",
+        "IMG_0657.WEBP",
+        "9E7B817F-0E19-477E-8033-04ED787485AD.PNG"
+      ],
+      "images": [
+        "/images/products/fe-015-01.webp",
+        "/images/products/fe-015-02.webp",
+        "/images/products/fe-015-03.webp"
+      ]
+    },
+    {
+      "id": "fe-016",
+      "name": "Жакет с акцентом на талии, тёмно-синий",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "58E775F9-7A84-4E84-B424-53571397B382.PNG",
+        "IMG_0669.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-016-01.webp",
+        "/images/products/fe-016-02.webp"
+      ]
+    },
+    {
+      "id": "fe-017",
+      "name": "Пальто с поясом, винное",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "A880F8AB-DFFF-4774-AE74-B739B9103D4A.PNG",
+        "5F13C38C-087B-495C-9572-DDA806F28BDC.PNG",
+        "D51993E7-2840-435E-AEB4-3CCDCFDA980F.PNG"
+      ],
+      "images": [
+        "/images/products/fe-017-01.webp",
+        "/images/products/fe-017-02.webp",
+        "/images/products/fe-017-03.webp"
+      ]
+    },
+    {
+      "id": "fe-018",
+      "name": "Рубашка белая классическая",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "B940BAFB-3FF6-49BD-B4BF-9F6E95439990 2.PNG",
+        "88BFC576-A304-4745-B2F4-6E10E547BBA2.PNG",
+        "AED685DB-D662-4096-8232-487692DC1605.PNG"
+      ],
+      "images": [
+        "/images/products/fe-018-01.webp",
+        "/images/products/fe-018-02.webp",
+        "/images/products/fe-018-03.webp"
+      ]
+    },
+    {
+      "id": "fe-019",
+      "name": "Юбка карандаш, шоколадная",
+      "category": "Юбки",
+      "article": "",
+      "sources": [
+        "68AC0DF7-7682-473A-887E-079FA2264469.PNG"
+      ],
+      "images": [
+        "/images/products/fe-019-01.webp"
+      ]
+    },
+    {
+      "id": "fe-020",
+      "name": "Рубашка с графичным принтом",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "IMG_0340.JPG",
+        "IMG_0341.JPG",
+        "IMG_0342.JPG",
+        "IMG_0343.JPG"
+      ],
+      "images": [
+        "/images/products/fe-020-01.webp",
+        "/images/products/fe-020-02.webp",
+        "/images/products/fe-020-03.webp",
+        "/images/products/fe-020-04.webp"
+      ]
+    },
+    {
+      "id": "fe-021",
+      "name": "Рубашка с растительным принтом",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "IMG_0344.JPG",
+        "IMG_0345.JPG",
+        "IMG_0346.JPG"
+      ],
+      "images": [
+        "/images/products/fe-021-01.webp",
+        "/images/products/fe-021-02.webp",
+        "/images/products/fe-021-03.webp"
+      ]
+    },
+    {
+      "id": "fe-022",
+      "name": "Топ с цельнокроеным рукавом, бежевый",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "IMG_0348.JPG",
+        "IMG_0347.JPG",
+        "IMG_0349.JPG"
+      ],
+      "images": [
+        "/images/products/fe-022-01.webp",
+        "/images/products/fe-022-02.webp",
+        "/images/products/fe-022-03.webp"
+      ]
+    },
+    {
+      "id": "fe-023",
+      "name": "Юбка А-силуэта, бордовая",
+      "category": "Юбки",
+      "article": "",
+      "sources": [
+        "IMG_0399.JPG",
+        "IMG_0400.JPG"
+      ],
+      "images": [
+        "/images/products/fe-023-01.webp",
+        "/images/products/fe-023-02.webp"
+      ]
+    },
+    {
+      "id": "fe-024",
+      "name": "Рубашка с мелким принтом, коричневая",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "IMG_0401.WEBP",
+        "IMG_0402.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-024-01.webp",
+        "/images/products/fe-024-02.webp"
+      ]
+    },
+    {
+      "id": "fe-025",
+      "name": "Блуза с фигурным воротником, красная",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "IMG_0404.WEBP",
+        "IMG_0403.WEBP",
+        "IMG_0405.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-025-01.webp",
+        "/images/products/fe-025-02.webp",
+        "/images/products/fe-025-03.webp"
+      ]
+    },
+    {
+      "id": "fe-026",
+      "name": "Блуза с воланами, пыльная роза",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "IMG_0408.WEBP",
+        "IMG_0406.WEBP",
+        "IMG_0407.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-026-01.webp",
+        "/images/products/fe-026-02.webp",
+        "/images/products/fe-026-03.webp"
+      ]
+    },
+    {
+      "id": "fe-027",
+      "name": "Рубашка в мелкий горох, розовая",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "IMG_0409.WEBP",
+        "IMG_0410.WEBP",
+        "IMG_0411.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-027-01.webp",
+        "/images/products/fe-027-02.webp",
+        "/images/products/fe-027-03.webp"
+      ]
+    },
+    {
+      "id": "fe-028",
+      "name": "Блуза в горох, чёрная",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "IMG_0412.jpg"
+      ],
+      "images": [
+        "/images/products/fe-028-01.webp"
+      ]
+    },
+    {
+      "id": "fe-029",
+      "name": "Брюки широкого кроя, бежевые",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0420.WEBP",
+        "IMG_0421.WEBP",
+        "IMG_0422.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-029-01.webp",
+        "/images/products/fe-029-02.webp",
+        "/images/products/fe-029-03.webp"
+      ]
+    },
+    {
+      "id": "fe-030",
+      "name": "Брюки свободного кроя, оливковые",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0423.WEBP",
+        "IMG_0424.WEBP",
+        "IMG_0425.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-030-01.webp",
+        "/images/products/fe-030-02.webp",
+        "/images/products/fe-030-03.webp"
+      ]
+    },
+    {
+      "id": "fe-031",
+      "name": "Брюки широкого кроя, красные",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0426.WEBP",
+        "IMG_0427.WEBP",
+        "IMG_0428.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-031-01.webp",
+        "/images/products/fe-031-02.webp",
+        "/images/products/fe-031-03.webp"
+      ]
+    },
+    {
+      "id": "fe-032",
+      "name": "Брюки широкого кроя, хаки",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0429.WEBP",
+        "IMG_0430.WEBP",
+        "IMG_0431.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-032-01.webp",
+        "/images/products/fe-032-02.webp",
+        "/images/products/fe-032-03.webp"
+      ]
+    },
+    {
+      "id": "fe-033",
+      "name": "Брюки с высокой посадкой, чёрные",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0433.WEBP",
+        "IMG_0434.WEBP",
+        "IMG_0435.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-033-01.webp",
+        "/images/products/fe-033-02.webp",
+        "/images/products/fe-033-03.webp"
+      ]
+    },
+    {
+      "id": "fe-034",
+      "name": "Брюки свободного кроя, коричневые",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0436.WEBP",
+        "IMG_0437.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-034-01.webp",
+        "/images/products/fe-034-02.webp"
+      ]
+    },
+    {
+      "id": "fe-035",
+      "name": "Брюки прямого кроя, тёмно-синие",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0438.WEBP",
+        "IMG_0439.WEBP",
+        "IMG_0440.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-035-01.webp",
+        "/images/products/fe-035-02.webp",
+        "/images/products/fe-035-03.webp"
+      ]
+    },
+    {
+      "id": "fe-036",
+      "name": "Брюки со стрелками, тёмно-синие",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0441.WEBP",
+        "IMG_0442.WEBP",
+        "IMG_0443.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-036-01.webp",
+        "/images/products/fe-036-02.webp",
+        "/images/products/fe-036-03.webp"
+      ]
+    },
+    {
+      "id": "fe-037",
+      "name": "Брюки широкого кроя, молочные",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0444.WEBP",
+        "IMG_0445.WEBP",
+        "IMG_0446.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-037-01.webp",
+        "/images/products/fe-037-02.webp",
+        "/images/products/fe-037-03.webp"
+      ]
+    },
+    {
+      "id": "fe-038",
+      "name": "Брюки широкого кроя, серые",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0447.WEBP",
+        "IMG_0448.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-038-01.webp",
+        "/images/products/fe-038-02.webp"
+      ]
+    },
+    {
+      "id": "fe-039",
+      "name": "Жакет прямого кроя, красный",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0449.WEBP",
+        "IMG_0450.WEBP",
+        "IMG_0451.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-039-01.webp",
+        "/images/products/fe-039-02.webp",
+        "/images/products/fe-039-03.webp"
+      ]
+    },
+    {
+      "id": "fe-040",
+      "name": "Жакет прямого кроя, пудровый",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0461.JPG",
+        "IMG_0462.WEBP",
+        "IMG_0463.JPG"
+      ],
+      "images": [
+        "/images/products/fe-040-01.webp",
+        "/images/products/fe-040-02.webp",
+        "/images/products/fe-040-03.webp"
+      ]
+    },
+    {
+      "id": "fe-041",
+      "name": "Жакет приталенный, чёрный",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0464.WEBP",
+        "IMG_0465.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-041-01.webp",
+        "/images/products/fe-041-02.webp"
+      ]
+    },
+    {
+      "id": "fe-042",
+      "name": "Жакет приталенный, белый",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0466.JPG",
+        "IMG_0467.JPG",
+        "IMG_0468.JPG",
+        "IMG_0470.JPG"
+      ],
+      "images": [
+        "/images/products/fe-042-01.webp",
+        "/images/products/fe-042-02.webp",
+        "/images/products/fe-042-03.webp",
+        "/images/products/fe-042-04.webp"
+      ]
+    },
+    {
+      "id": "fe-043",
+      "name": "Жакет двубортный, белый",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0469.JPG"
+      ],
+      "images": [
+        "/images/products/fe-043-01.webp"
+      ]
+    },
+    {
+      "id": "fe-044",
+      "name": "Платье миди с V-образным вырезом",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0471.WEBP",
+        "IMG_0472.WEBP",
+        "IMG_0473.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-044-01.webp",
+        "/images/products/fe-044-02.webp",
+        "/images/products/fe-044-03.webp"
+      ]
+    },
+    {
+      "id": "fe-045",
+      "name": "Платье с поясом и фигурным вырезом",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0475.JPG",
+        "IMG_0474.JPG",
+        "IMG_0476.JPG",
+        "IMG_0477.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-045-01.webp",
+        "/images/products/fe-045-02.webp",
+        "/images/products/fe-045-03.webp",
+        "/images/products/fe-045-04.webp"
+      ]
+    },
+    {
+      "id": "fe-046",
+      "name": "Платье на запах, пыльная роза",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0481.JPG",
+        "IMG_0478.JPG",
+        "IMG_0479.JPG",
+        "IMG_0480.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-046-01.webp",
+        "/images/products/fe-046-02.webp",
+        "/images/products/fe-046-03.webp",
+        "/images/products/fe-046-04.webp"
+      ]
+    },
+    {
+      "id": "fe-047",
+      "name": "Платье-рубашка с поясом, тёмно-синее",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0482.JPG",
+        "IMG_0483.JPG",
+        "IMG_0484.JPG"
+      ],
+      "images": [
+        "/images/products/fe-047-01.webp",
+        "/images/products/fe-047-02.webp",
+        "/images/products/fe-047-03.webp"
+      ]
+    },
+    {
+      "id": "fe-048",
+      "name": "Платье-жакет, светло-серое",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0485.JPG",
+        "IMG_0486.JPG",
+        "IMG_0487.JPG",
+        "IMG_0488.JPG"
+      ],
+      "images": [
+        "/images/products/fe-048-01.webp",
+        "/images/products/fe-048-02.webp",
+        "/images/products/fe-048-03.webp",
+        "/images/products/fe-048-04.webp"
+      ]
+    },
+    {
+      "id": "fe-049",
+      "name": "Платье-жакет, сливовое",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0489.JPG",
+        "IMG_0490.JPG",
+        "IMG_0491.JPG",
+        "IMG_0492.JPG"
+      ],
+      "images": [
+        "/images/products/fe-049-01.webp",
+        "/images/products/fe-049-02.webp",
+        "/images/products/fe-049-03.webp",
+        "/images/products/fe-049-04.webp"
+      ]
+    },
+    {
+      "id": "fe-050",
+      "name": "Платье с драпировкой, шоколадное",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0493.JPG",
+        "IMG_0494.JPG",
+        "IMG_0495.JPG",
+        "IMG_0496.JPG"
+      ],
+      "images": [
+        "/images/products/fe-050-01.webp",
+        "/images/products/fe-050-02.webp",
+        "/images/products/fe-050-03.webp",
+        "/images/products/fe-050-04.webp"
+      ]
+    },
+    {
+      "id": "fe-051",
+      "name": "Платье с драпировкой, бордовое",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0497.JPG",
+        "IMG_0498.JPG",
+        "IMG_0499.JPG"
+      ],
+      "images": [
+        "/images/products/fe-051-01.webp",
+        "/images/products/fe-051-02.webp",
+        "/images/products/fe-051-03.webp"
+      ]
+    },
+    {
+      "id": "fe-052",
+      "name": "Платье без рукавов с разрезом, чёрное",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0500.JPG",
+        "IMG_0501.JPG",
+        "IMG_0502.JPG",
+        "IMG_0503.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-052-01.webp",
+        "/images/products/fe-052-02.webp",
+        "/images/products/fe-052-03.webp",
+        "/images/products/fe-052-04.webp"
+      ]
+    },
+    {
+      "id": "fe-053",
+      "name": "Платье без рукавов с разрезом, бордовое",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0504.JPG",
+        "IMG_0505.JPG",
+        "IMG_0506.JPG",
+        "IMG_0507.JPG"
+      ],
+      "images": [
+        "/images/products/fe-053-01.webp",
+        "/images/products/fe-053-02.webp",
+        "/images/products/fe-053-03.webp",
+        "/images/products/fe-053-04.webp"
+      ]
+    },
+    {
+      "id": "fe-054",
+      "name": "Платье с полупрозрачным подолом, чёрное",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0508.WEBP",
+        "IMG_0509.WEBP",
+        "IMG_0510.JPG"
+      ],
+      "images": [
+        "/images/products/fe-054-01.webp",
+        "/images/products/fe-054-02.webp",
+        "/images/products/fe-054-03.webp"
+      ]
+    },
+    {
+      "id": "fe-055",
+      "name": "Платье с полупрозрачным подолом, красное",
+      "category": "Платья",
+      "article": "",
+      "sources": [
+        "IMG_0511.JPG",
+        "IMG_0512.JPG"
+      ],
+      "images": [
+        "/images/products/fe-055-01.webp",
+        "/images/products/fe-055-02.webp"
+      ]
+    },
+    {
+      "id": "fe-056",
+      "name": "Платье прямого кроя с вырезом",
+      "category": "Платья",
+      "article": "73123",
+      "sources": [
+        "IMG_0513.PNG",
+        "IMG_0514.PNG",
+        "IMG_0515.PNG"
+      ],
+      "images": [
+        "/images/products/fe-056-01.webp",
+        "/images/products/fe-056-02.webp",
+        "/images/products/fe-056-03.webp"
+      ]
+    },
+    {
+      "id": "fe-057",
+      "name": "Платье с анималистичным принтом, серое",
+      "category": "Платья",
+      "article": "72365",
+      "sources": [
+        "IMG_0516.PNG",
+        "IMG_0517.PNG",
+        "IMG_0518.PNG"
+      ],
+      "images": [
+        "/images/products/fe-057-01.webp",
+        "/images/products/fe-057-02.webp",
+        "/images/products/fe-057-03.webp"
+      ]
+    },
+    {
+      "id": "fe-058",
+      "name": "Платье на запах с поясом, пудровое",
+      "category": "Платья",
+      "article": "68083",
+      "sources": [
+        "IMG_0519.PNG",
+        "IMG_0520.PNG"
+      ],
+      "images": [
+        "/images/products/fe-058-01.webp",
+        "/images/products/fe-058-02.webp"
+      ]
+    },
+    {
+      "id": "fe-059",
+      "name": "Платье миди, тёмно-синее",
+      "category": "Платья",
+      "article": "68086",
+      "sources": [
+        "IMG_0521.PNG"
+      ],
+      "images": [
+        "/images/products/fe-059-01.webp"
+      ]
+    },
+    {
+      "id": "fe-060",
+      "name": "Платье с анималистичным принтом, бежевое",
+      "category": "Платья",
+      "article": "68014",
+      "sources": [
+        "IMG_0523.PNG",
+        "IMG_0522.PNG"
+      ],
+      "images": [
+        "/images/products/fe-060-01.webp",
+        "/images/products/fe-060-02.webp"
+      ]
+    },
+    {
+      "id": "fe-061",
+      "name": "Платье на запах с поясом, бежевое",
+      "category": "Платья",
+      "article": "71519у",
+      "sources": [
+        "IMG_0524.PNG",
+        "IMG_0526.PNG",
+        "IMG_0525.PNG"
+      ],
+      "images": [
+        "/images/products/fe-061-01.webp",
+        "/images/products/fe-061-02.webp",
+        "/images/products/fe-061-03.webp"
+      ]
+    },
+    {
+      "id": "fe-062",
+      "name": "Платье свободного кроя с разрезом",
+      "category": "Платья",
+      "article": "71059",
+      "sources": [
+        "IMG_0527.PNG",
+        "IMG_0528.PNG"
+      ],
+      "images": [
+        "/images/products/fe-062-01.webp",
+        "/images/products/fe-062-02.webp"
+      ]
+    },
+    {
+      "id": "fe-063",
+      "name": "Платье макси в горох",
+      "category": "Платья",
+      "article": "66246",
+      "sources": [
+        "IMG_0529.PNG",
+        "IMG_0530.PNG"
+      ],
+      "images": [
+        "/images/products/fe-063-01.webp",
+        "/images/products/fe-063-02.webp"
+      ]
+    },
+    {
+      "id": "fe-064",
+      "name": "Платье на запах с выразительным принтом",
+      "category": "Платья",
+      "article": "66276",
+      "sources": [
+        "IMG_0531.PNG",
+        "IMG_0532.PNG",
+        "IMG_0533.PNG"
+      ],
+      "images": [
+        "/images/products/fe-064-01.webp",
+        "/images/products/fe-064-02.webp",
+        "/images/products/fe-064-03.webp"
+      ]
+    },
+    {
+      "id": "fe-065",
+      "name": "Жакет однобортный, тёмно-синий",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0534.JPG",
+        "IMG_0535.JPG",
+        "IMG_0536.JPG",
+        "IMG_0537.JPG"
+      ],
+      "images": [
+        "/images/products/fe-065-01.webp",
+        "/images/products/fe-065-02.webp",
+        "/images/products/fe-065-03.webp",
+        "/images/products/fe-065-04.webp"
+      ]
+    },
+    {
+      "id": "fe-066",
+      "name": "Жакет двубортный с контрастными пуговицами",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0538.JPG",
+        "IMG_0539.JPG",
+        "IMG_0540.JPG",
+        "IMG_0541.JPG",
+        "IMG_0542.JPG",
+        "IMG_0543.JPG",
+        "IMG_0544.JPG"
+      ],
+      "images": [
+        "/images/products/fe-066-01.webp",
+        "/images/products/fe-066-02.webp",
+        "/images/products/fe-066-03.webp",
+        "/images/products/fe-066-04.webp",
+        "/images/products/fe-066-05.webp",
+        "/images/products/fe-066-06.webp",
+        "/images/products/fe-066-07.webp"
+      ]
+    },
+    {
+      "id": "fe-067",
+      "name": "Жакет двубортный, чёрный",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0545.JPG",
+        "IMG_0546.JPG",
+        "IMG_0547.JPG",
+        "IMG_0548.JPG",
+        "IMG_0549.JPG",
+        "IMG_0550.JPG"
+      ],
+      "images": [
+        "/images/products/fe-067-01.webp",
+        "/images/products/fe-067-02.webp",
+        "/images/products/fe-067-03.webp",
+        "/images/products/fe-067-04.webp",
+        "/images/products/fe-067-05.webp",
+        "/images/products/fe-067-06.webp"
+      ]
+    },
+    {
+      "id": "fe-068",
+      "name": "Жакет с фактурной поверхностью, молочный",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0551.JPG",
+        "IMG_0552.JPG",
+        "IMG_0553.JPG",
+        "IMG_0554.JPG"
+      ],
+      "images": [
+        "/images/products/fe-068-01.webp",
+        "/images/products/fe-068-02.webp",
+        "/images/products/fe-068-03.webp",
+        "/images/products/fe-068-04.webp"
+      ]
+    },
+    {
+      "id": "fe-069",
+      "name": "Жакет в клетку, коричнево-синий",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0555.JPG",
+        "IMG_0558.JPG",
+        "IMG_0556.JPG",
+        "IMG_0557.JPG"
+      ],
+      "images": [
+        "/images/products/fe-069-01.webp",
+        "/images/products/fe-069-02.webp",
+        "/images/products/fe-069-03.webp",
+        "/images/products/fe-069-04.webp"
+      ]
+    },
+    {
+      "id": "fe-070",
+      "name": "Жакет двубортный, бордовый",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0559.JPG",
+        "IMG_0560.JPG",
+        "IMG_0561.JPG",
+        "IMG_0562.JPG",
+        "IMG_0563.JPG"
+      ],
+      "images": [
+        "/images/products/fe-070-01.webp",
+        "/images/products/fe-070-02.webp",
+        "/images/products/fe-070-03.webp",
+        "/images/products/fe-070-04.webp",
+        "/images/products/fe-070-05.webp"
+      ]
+    },
+    {
+      "id": "fe-071",
+      "name": "Брюки классического кроя, бордовые",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0564.JPG",
+        "IMG_0565.JPG",
+        "IMG_0566.JPG",
+        "IMG_0567.JPG"
+      ],
+      "images": [
+        "/images/products/fe-071-01.webp",
+        "/images/products/fe-071-02.webp",
+        "/images/products/fe-071-03.webp",
+        "/images/products/fe-071-04.webp"
+      ]
+    },
+    {
+      "id": "fe-072",
+      "name": "Брюки со стрелками, коричневые",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0569.JPG",
+        "IMG_0568.JPG",
+        "IMG_0570.JPG",
+        "IMG_0571.JPG"
+      ],
+      "images": [
+        "/images/products/fe-072-01.webp",
+        "/images/products/fe-072-02.webp",
+        "/images/products/fe-072-03.webp",
+        "/images/products/fe-072-04.webp"
+      ]
+    },
+    {
+      "id": "fe-073",
+      "name": "Брюки классического кроя, тёмно-синие",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0572.JPG",
+        "IMG_0573.JPG",
+        "IMG_0574.JPG"
+      ],
+      "images": [
+        "/images/products/fe-073-01.webp",
+        "/images/products/fe-073-02.webp",
+        "/images/products/fe-073-03.webp"
+      ]
+    },
+    {
+      "id": "fe-074",
+      "name": "Брюки классического кроя, кэмел",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0575.JPG",
+        "IMG_0576.JPG",
+        "IMG_0577.JPG"
+      ],
+      "images": [
+        "/images/products/fe-074-01.webp",
+        "/images/products/fe-074-02.webp",
+        "/images/products/fe-074-03.webp"
+      ]
+    },
+    {
+      "id": "fe-075",
+      "name": "Юбка миди с разрезом, бордовая",
+      "category": "Юбки",
+      "article": "",
+      "sources": [
+        "IMG_0578.JPG",
+        "IMG_0579.JPG",
+        "IMG_0580.JPG"
+      ],
+      "images": [
+        "/images/products/fe-075-01.webp",
+        "/images/products/fe-075-02.webp",
+        "/images/products/fe-075-03.webp"
+      ]
+    },
+    {
+      "id": "fe-076",
+      "name": "Жакет однобортный, пыльная роза",
+      "category": "Жакеты",
+      "article": "71355",
+      "sources": [
+        "IMG_0581.PNG",
+        "IMG_0582.PNG",
+        "IMG_0583.PNG"
+      ],
+      "images": [
+        "/images/products/fe-076-01.webp",
+        "/images/products/fe-076-02.webp",
+        "/images/products/fe-076-03.webp"
+      ]
+    },
+    {
+      "id": "fe-077",
+      "name": "Жакет с поясом, серый",
+      "category": "Жакеты",
+      "article": "",
+      "sources": [
+        "IMG_0584.JPG",
+        "IMG_0585.JPG",
+        "IMG_0586.JPG",
+        "IMG_0587.JPG"
+      ],
+      "images": [
+        "/images/products/fe-077-01.webp",
+        "/images/products/fe-077-02.webp",
+        "/images/products/fe-077-03.webp",
+        "/images/products/fe-077-04.webp"
+      ]
+    },
+    {
+      "id": "fe-078",
+      "name": "Джемпер с контрастной отделкой, бордовый",
+      "category": "Трикотаж",
+      "article": "",
+      "sources": [
+        "IMG_0593.JPG",
+        "IMG_0594.JPG",
+        "IMG_0595.JPG",
+        "IMG_0596.JPG"
+      ],
+      "images": [
+        "/images/products/fe-078-01.webp",
+        "/images/products/fe-078-02.webp",
+        "/images/products/fe-078-03.webp",
+        "/images/products/fe-078-04.webp"
+      ]
+    },
+    {
+      "id": "fe-079",
+      "name": "Джемпер с высоким воротником, тауп",
+      "category": "Трикотаж",
+      "article": "",
+      "sources": [
+        "IMG_0597.JPG"
+      ],
+      "images": [
+        "/images/products/fe-079-01.webp"
+      ]
+    },
+    {
+      "id": "fe-080",
+      "name": "Джемпер с V-образным вырезом, чёрный",
+      "category": "Трикотаж",
+      "article": "",
+      "sources": [
+        "IMG_0598.JPG",
+        "IMG_0599.JPG"
+      ],
+      "images": [
+        "/images/products/fe-080-01.webp",
+        "/images/products/fe-080-02.webp"
+      ]
+    },
+    {
+      "id": "fe-081",
+      "name": "Джемпер с высоким воротником и фактурными вставками",
+      "category": "Трикотаж",
+      "article": "",
+      "sources": [
+        "IMG_0600.JPG",
+        "IMG_0601.JPG",
+        "IMG_0602.JPG"
+      ],
+      "images": [
+        "/images/products/fe-081-01.webp",
+        "/images/products/fe-081-02.webp",
+        "/images/products/fe-081-03.webp"
+      ]
+    },
+    {
+      "id": "fe-082",
+      "name": "Джемпер с контрастным V-образным вырезом",
+      "category": "Трикотаж",
+      "article": "",
+      "sources": [
+        "IMG_0604.JPG",
+        "IMG_0603.JPG",
+        "IMG_0605.JPG",
+        "IMG_0606.JPG"
+      ],
+      "images": [
+        "/images/products/fe-082-01.webp",
+        "/images/products/fe-082-02.webp",
+        "/images/products/fe-082-03.webp",
+        "/images/products/fe-082-04.webp"
+      ]
+    },
+    {
+      "id": "fe-083",
+      "name": "Джемпер свободного кроя, серый",
+      "category": "Трикотаж",
+      "article": "",
+      "sources": [
+        "IMG_0607.JPG",
+        "IMG_0608.JPG",
+        "IMG_0609.JPG"
+      ],
+      "images": [
+        "/images/products/fe-083-01.webp",
+        "/images/products/fe-083-02.webp",
+        "/images/products/fe-083-03.webp"
+      ]
+    },
+    {
+      "id": "fe-084",
+      "name": "Джемпер свободного кроя, молочный",
+      "category": "Трикотаж",
+      "article": "",
+      "sources": [
+        "IMG_0610.JPG",
+        "IMG_0611.JPG",
+        "IMG_0612.JPG",
+        "IMG_0613.JPG"
+      ],
+      "images": [
+        "/images/products/fe-084-01.webp",
+        "/images/products/fe-084-02.webp",
+        "/images/products/fe-084-03.webp",
+        "/images/products/fe-084-04.webp"
+      ]
+    },
+    {
+      "id": "fe-085",
+      "name": "Джемпер свободного кроя, синий",
+      "category": "Трикотаж",
+      "article": "",
+      "sources": [
+        "IMG_0615.JPG",
+        "IMG_0614.JPG",
+        "IMG_0616.JPG",
+        "IMG_0617.JPG"
+      ],
+      "images": [
+        "/images/products/fe-085-01.webp",
+        "/images/products/fe-085-02.webp",
+        "/images/products/fe-085-03.webp",
+        "/images/products/fe-085-04.webp"
+      ]
+    },
+    {
+      "id": "fe-086",
+      "name": "Юбка трикотажная с контрастной отделкой",
+      "category": "Юбки",
+      "article": "",
+      "sources": [
+        "IMG_0618.JPG",
+        "IMG_0619.JPG",
+        "IMG_0620.JPG"
+      ],
+      "images": [
+        "/images/products/fe-086-01.webp",
+        "/images/products/fe-086-02.webp",
+        "/images/products/fe-086-03.webp"
+      ]
+    },
+    {
+      "id": "fe-087",
+      "name": "Пальто двубортное с поясом, чёрное",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "IMG_0621.JPG",
+        "IMG_0622.JPG",
+        "IMG_0623.JPG",
+        "IMG_0624.JPG"
+      ],
+      "images": [
+        "/images/products/fe-087-01.webp",
+        "/images/products/fe-087-02.webp",
+        "/images/products/fe-087-03.webp",
+        "/images/products/fe-087-04.webp"
+      ]
+    },
+    {
+      "id": "fe-088",
+      "name": "Пальто двубортное с поясом, тауп",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "IMG_0625.JPG",
+        "IMG_0626.JPG",
+        "IMG_0627.JPG",
+        "IMG_0628.JPG"
+      ],
+      "images": [
+        "/images/products/fe-088-01.webp",
+        "/images/products/fe-088-02.webp",
+        "/images/products/fe-088-03.webp",
+        "/images/products/fe-088-04.webp"
+      ]
+    },
+    {
+      "id": "fe-089",
+      "name": "Полупальто, шоколадное",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "IMG_0629.JPG",
+        "IMG_0630.JPG",
+        "IMG_0631.JPG"
+      ],
+      "images": [
+        "/images/products/fe-089-01.webp",
+        "/images/products/fe-089-02.webp",
+        "/images/products/fe-089-03.webp"
+      ]
+    },
+    {
+      "id": "fe-090",
+      "name": "Полупальто прямого кроя, хаки",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "IMG_0632.JPG",
+        "IMG_0633.JPG",
+        "IMG_0634.JPG"
+      ],
+      "images": [
+        "/images/products/fe-090-01.webp",
+        "/images/products/fe-090-02.webp",
+        "/images/products/fe-090-03.webp"
+      ]
+    },
+    {
+      "id": "fe-091",
+      "name": "Пальто с поясом, оливковое",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "IMG_0635.JPG"
+      ],
+      "images": [
+        "/images/products/fe-091-01.webp"
+      ]
+    },
+    {
+      "id": "fe-092",
+      "name": "Полупальто двубортное, тёмно-зелёное",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "IMG_0636.JPG",
+        "IMG_0637.JPG"
+      ],
+      "images": [
+        "/images/products/fe-092-01.webp",
+        "/images/products/fe-092-02.webp"
+      ]
+    },
+    {
+      "id": "fe-093",
+      "name": "Полупальто двубортное, оливковое",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "IMG_0638.JPG",
+        "IMG_0639.JPG",
+        "IMG_0640.JPG"
+      ],
+      "images": [
+        "/images/products/fe-093-01.webp",
+        "/images/products/fe-093-02.webp",
+        "/images/products/fe-093-03.webp"
+      ]
+    },
+    {
+      "id": "fe-094",
+      "name": "Пальто с поясом, бежевое",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "IMG_0641.JPG",
+        "IMG_0642.JPG",
+        "IMG_0643.JPG"
+      ],
+      "images": [
+        "/images/products/fe-094-01.webp",
+        "/images/products/fe-094-02.webp",
+        "/images/products/fe-094-03.webp"
+      ]
+    },
+    {
+      "id": "fe-095",
+      "name": "Пальто с поясом, сливовое",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "IMG_0647.JPG",
+        "IMG_0644.JPG",
+        "IMG_0645.JPG",
+        "IMG_0646.JPG"
+      ],
+      "images": [
+        "/images/products/fe-095-01.webp",
+        "/images/products/fe-095-02.webp",
+        "/images/products/fe-095-03.webp",
+        "/images/products/fe-095-04.webp"
+      ]
+    },
+    {
+      "id": "fe-096",
+      "name": "Пальто в тонкую полоску",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "IMG_0648.JPG",
+        "IMG_0649.JPG",
+        "IMG_0650.JPG",
+        "IMG_0651.JPG",
+        "IMG_0652.JPG"
+      ],
+      "images": [
+        "/images/products/fe-096-01.webp",
+        "/images/products/fe-096-02.webp",
+        "/images/products/fe-096-03.webp",
+        "/images/products/fe-096-04.webp",
+        "/images/products/fe-096-05.webp"
+      ]
+    },
+    {
+      "id": "fe-097",
+      "name": "Пальто двубортное, бордовое",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "IMG_0653.JPG",
+        "IMG_0654.JPG",
+        "IMG_0655.JPG"
+      ],
+      "images": [
+        "/images/products/fe-097-01.webp",
+        "/images/products/fe-097-02.webp",
+        "/images/products/fe-097-03.webp"
+      ]
+    },
+    {
+      "id": "fe-098",
+      "name": "Рубашка прямого кроя, голубая",
+      "category": "Блузы и рубашки",
+      "article": "",
+      "sources": [
+        "IMG_0658.WEBP",
+        "IMG_0659.WEBP",
+        "IMG_0660.WEBP"
+      ],
+      "images": [
+        "/images/products/fe-098-01.webp",
+        "/images/products/fe-098-02.webp",
+        "/images/products/fe-098-03.webp"
+      ]
+    },
+    {
+      "id": "fe-099",
+      "name": "Жилет костюмный в полоску",
+      "category": "Жилеты",
+      "article": "",
+      "sources": [
+        "IMG_0661.JPG",
+        "IMG_0662.JPG",
+        "IMG_0663.JPG",
+        "IMG_0664.JPG",
+        "IMG_0667.JPG"
+      ],
+      "images": [
+        "/images/products/fe-099-01.webp",
+        "/images/products/fe-099-02.webp",
+        "/images/products/fe-099-03.webp",
+        "/images/products/fe-099-04.webp",
+        "/images/products/fe-099-05.webp"
+      ]
+    },
+    {
+      "id": "fe-100",
+      "name": "Брюки прямого кроя в полоску",
+      "category": "Брюки",
+      "article": "",
+      "sources": [
+        "IMG_0665.JPG",
+        "IMG_0666.JPG"
+      ],
+      "images": [
+        "/images/products/fe-100-01.webp",
+        "/images/products/fe-100-02.webp"
+      ]
+    },
+    {
+      "id": "fe-101",
+      "name": "Пальто двубортное, серое",
+      "category": "Верхняя одежда",
+      "article": "",
+      "sources": [
+        "IMG_0670.jpg",
+        "IMG_0671.jpg",
+        "IMG_0672.jpg"
+      ],
+      "images": [
+        "/images/products/fe-101-01.webp",
+        "/images/products/fe-101-02.webp",
+        "/images/products/fe-101-03.webp"
+      ]
+    }
+  ],
+  "skippedDuplicates": [
+    {
+      "source": "5315C2B8-482C-4075-ADB6-0F6F7F4B7761.PNG",
+      "samePhotoAs": "5315C2B8-482C-4075-ADB6-0F6F7F4B7761 2.PNG"
+    },
+    {
+      "source": "AE89DEDC-AE16-4569-94D8-48334B1AB74A.PNG",
+      "samePhotoAs": "AE89DEDC-AE16-4569-94D8-48334B1AB74A 2.PNG"
+    },
+    {
+      "source": "B940BAFB-3FF6-49BD-B4BF-9F6E95439990.PNG",
+      "samePhotoAs": "B940BAFB-3FF6-49BD-B4BF-9F6E95439990 2.PNG"
+    },
+    {
+      "source": "IMG_0668.WEBP",
+      "samePhotoAs": "58E775F9-7A84-4E84-B424-53571397B382.PNG"
+    }
+  ],
+  "metadataNote": "Названия и цвета описаны по фотографиям. Артикулы указаны только там, где читаются на предоставленных снимках. Цены, размеры, состав и остатки не предоставлены."
+}
