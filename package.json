@@ -13,7 +13,8 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
     "build:demo": "node scripts/build-demo.mjs",
-    "preview:demo": "vite preview --config demo/vite.config.ts --host 127.0.0.1"
+    "preview:demo": "vite preview --config demo/vite.config.ts --host 127.0.0.1",
+    "test:popup": "node scripts/test-popup.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -61,7 +62,8 @@
     "typescript": "5.9.3",
     "vinext": "1.0.0-beta.5",
     "vite": "8.0.13",
-    "wrangler": "4.92.0"
+    "wrangler": "4.92.0",
+    "esbuild": "0.28.0"
   },
   "type": "module",
   "overrides": {

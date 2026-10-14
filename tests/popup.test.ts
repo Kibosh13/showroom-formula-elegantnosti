@@ -1,0 +1,56 @@
+import assert from 'node:assert/strict';
+import {defaultPopup,popupDue,normalizePhone,maskPhone,sanitizeAttribution} from '../app/popup-policy';
+import {defaultSettings,catalogueProducts,categories,normalizeCategory} from '../app/data';
+import {settingsSchema} from '../app/validation';
+import {POST as lead} from '../app/api/leads/route';
+import {POST as event} from '../app/api/events/route';
+import {env,records} from './workers-fixture';
+
+const start=1_800_000_000_000,day=86400000;
+assert.equal(popupDue(defaultPopup,start+19999,start,false,null,false),false);
+assert.equal(popupDue(defaultPopup,start+20000,start,false,null,false),true);
+assert.equal(popupDue(defaultPopup,start+20000,start,false,null,true),false);
+assert.equal(popupDue(defaultPopup,start+20000,start,true,null,false),false);
+assert.equal(popupDue({...defaultPopup,popupEnabled:false},start+20000,start,false,null,false),false);
+assert.equal(popupDue({...defaultPopup,popupExpires:'2020-01-01'},start+20000,start,false,null,false),false);
+for(const [outcome,days] of [['closed',7],['converted',30]] as const){
+  assert.equal(popupDue(defaultPopup,start+days*day-1,start,false,{outcome,at:start},false),false);
+  assert.equal(popupDue(defaultPopup,start+days*day,start,false,{outcome,at:start},false),true);
+}
+assert.equal(normalizePhone('+7 (900) 123-45-67'),'+79001234567');
+assert.equal(normalizePhone('8 900 123 45 67'),'+79001234567');
+assert.equal(normalizePhone('9001234567'),'+79001234567');
+assert.equal(normalizePhone('+7 (900) 123'),null);
+assert.equal(normalizePhone('+7 111 111 11 11'),null);
+assert.equal(normalizePhone('+7 900 123 45 678'),null);
+assert.equal(maskPhone('89001234567'),'+7 (900) 123-45-67');
+assert.equal(settingsSchema.safeParse(defaultSettings).success,true);
+assert.equal(settingsSchema.safeParse({...defaultSettings,popupDelaySeconds:19}).success,false);
+assert.equal(settingsSchema.safeParse({...defaultSettings,telegram:'javascript:alert(1)'}).success,false);
+assert.equal(categories.includes('Костюмы'),false);
+assert.equal(catalogueProducts.length,101);
+assert.equal(catalogueProducts.filter(p=>p.gallery.length>0).length,91);
+assert.ok(catalogueProducts.every(p=>categories.includes(p.category)));
+assert.equal(normalizeCategory('Жилеты'),'Жакеты/жилеты');
+assert.equal(sanitizeAttribution({pageUrl:'javascript:alert(1)',utm:{phone:'private',utm_source:'ad'}}).pageUrl,'');
+assert.deepEqual(sanitizeAttribution({utm:{phone:'private',utm_source:'ad'}}).utm,{utm_source:'ad'});
+
+const body={kind:'discount',phone:'+7 (900) 123-45-67',consent:true,source:'popup_discount',pageUrl:'https://example.test/catalog/?utm_source=test',referrer:'https://example.test/',utm:{utm_source:'test',utm_campaign:'launch'}};
+const request=(b:any,origin='https://example.test')=>new Request('https://example.test/api/leads',{method:'POST',headers:{'Content-Type':'application/json',Origin:origin},body:JSON.stringify(b)});
+assert.equal((await lead(request({...body,phone:'+7 900'}))).status,400);
+assert.equal((await lead(request({...body,consent:false}))).status,400);
+assert.equal((await lead(request({...body,website:'spam.test'}))).status,400);
+assert.equal((await lead(request(body,'https://other.test'))).status,403);
+assert.equal(records.leads.length,0);
+const response=await lead(request(body));
+assert.equal(response.status,200);assert.equal((await response.json() as {ok:boolean}).ok,true);
+assert.equal(records.leads.length,1);
+const saved=records.leads[0];assert.equal(saved[1],'discount');assert.equal(saved[3],'+79001234567');assert.equal(saved[5],'Новая');
+const payload=JSON.parse(saved[4]);assert.equal(payload.source,'popup_discount');assert.equal(payload.utm.utm_source,'test');assert.equal(payload.utm.utm_campaign,'launch');assert.equal(payload.pageUrl,body.pageUrl);assert.equal(payload.marketingConsent,false);assert.ok(payload.consentAt);
+records.recent=5;assert.equal((await lead(request({...body,phone:'8 (900) 123-45-67'}))).status,429);records.recent=0;
+env.DB=null as any;assert.equal((await lead(request(body))).status,503);env.DB=records.db;
+assert.equal((await lead(request({kind:'fitting',name:'Тест',phone:'+79001234567',consent:true,source:'popup_discount'}))).status,200);
+assert.equal(JSON.parse(records.leads[1][4]).source,'popup_discount');
+const eventResponse=await event(new Request('https://example.test/api/events',{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://example.test'},body:JSON.stringify({name:'discount_popup_view',...body})}));
+assert.equal(eventResponse.status,204);assert.equal(JSON.parse(records.events[0][3]).source,'popup_discount');assert.equal(JSON.parse(records.events[0][3]).utm.utm_source,'test');
+console.log('Popup checks passed: delay, blocking, session/cooldowns, expiry/CMS, phone, attribution, lead persistence, spam, failure, booking source, analytics and catalogue preservation.');

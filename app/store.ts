@@ -1,5 +1,5 @@
 import { env } from 'cloudflare:workers';
-import { catalogueProducts, collectionLooks, defaultSettings } from './data';
+import { catalogueProducts, collectionLooks, defaultSettings, normalizeCategory, categories } from './data';
 import type {Product, Look, Settings} from './data';
 export async function loadStore(){
  let products=catalogueProducts, looks=collectionLooks, settings=defaultSettings, reviews:any[]=[];
@@ -11,6 +11,13 @@ export async function loadStore(){
   const lo=new Map(rows.filter(r=>r.kind==='look').map(r=>[r.id,JSON.parse(r.payload)]));
   looks=[...collectionLooks.map(p=>lo.get(p.id)||p),...Array.from(lo.values()).filter((p:any)=>!collectionLooks.some(d=>d.id===p.id))];
   const config=rows.find(r=>r.kind==='settings'); if(config) settings={...defaultSettings,...JSON.parse(config.payload)};
+  products=products.map(p=>({...p,category:normalizeCategory(p.category)}));
+  const legacyCategories=settings.categories.some(c=>['Костюмы','Жакеты','Жилеты','Блузы и рубашки','Трикотаж'].includes(c));
+  settings={...settings,
+   address:['Москва, ул. Неглинная 8/10','Москва, ул. Неглинная, 8/10','Неглинная 8/10'].includes(settings.address)?defaultSettings.address:settings.address,
+   about:settings.about.replace('Здесь можно спокойно примерить вещи со стилистом и завершить образ макияжем от профессионального визажиста.','Здесь можно подобрать вещи как самостоятельно, так и со стилистом, а затем завершить образ макияжем от профессионального визажиста и укладкой.'),
+   categories:legacyCategories?[...categories,...settings.categories.filter(c=>!['Костюмы',...categories].includes(normalizeCategory(c))).map(normalizeCategory)]:Array.from(new Set(settings.categories.filter(c=>c!=='Костюмы').map(normalizeCategory)))
+  };
   reviews=rows.filter(r=>r.kind==='review').map(r=>({id:r.id,...JSON.parse(r.payload)})).filter(r=>r.published);
  } catch{ console.error('Catalogue data unavailable; serving imported catalogue'); }
  return {products:products as Product[],looks:looks as Look[],settings:settings as Settings,reviews};

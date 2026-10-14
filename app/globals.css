@@ -70,6 +70,54 @@
 
 @media(max-width:380px){.header .header-book{display:none}.header .brand>span{font-size:25px}.header-actions>.icon-button{width:40px;min-width:40px}.hero-buttons .button{font-size:10px}.hero-index span{font-size:8px}}
 
+/* One upright heading style keeps accent words on the same visual baseline. */
+h1 i,h2 i,h3 i,.hero-note i{font-style:normal;font-synthesis:none}
+.about-intro h1{overflow-wrap:normal;font-size:clamp(48px,5vw,72px)}
+.two-text-columns h2{line-height:1.12}
+.makeup-room{width:100%;height:320px;object-fit:cover;margin-top:24px}
+.category-empty{display:flex;align-items:center;justify-content:center;aspect-ratio:3/4;background:#ded2c4;color:var(--ink);min-height:175px}
+.category-empty svg{width:40px;height:40px;stroke-width:1}
+.messengers{gap:12px}
+.messengers a,.messengers button{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--ink);border-radius:50%;color:var(--ink);padding:10px}
+.messengers a:hover,.messengers button:hover{background:var(--ink);color:var(--white)}
+.messengers svg{width:24px;height:24px;flex-shrink:0}
+.max-instructions{margin:22px 0}
+.max-phone{display:block;font-size:23px;margin:18px 0}
+.max-phone+.button{margin-bottom:14px}
+.discount-dialog{width:720px;max-width:100%;padding:0;display:grid;grid-template-columns:42% 58%;overflow:auto;isolation:isolate}
+.discount-dialog .dialog-close{position:absolute;top:10px;right:10px;width:44px;height:44px;background:var(--paper);border-radius:50%;z-index:2}
+.discount-visual{min-height:460px}
+.discount-visual img{width:100%;height:100%;object-fit:cover;object-position:76% center}
+.discount-content{padding:44px 30px 28px;min-width:0}
+.discount-content>.eyebrow{font-size:11px;letter-spacing:1.5px;margin-bottom:16px}
+.discount-content h2{font-size:34px;line-height:1.08;letter-spacing:-.4px;margin-bottom:18px}
+.discount-content p{font-size:13px;line-height:1.65}
+.discount-content .field{margin:20px 0 14px}
+.discount-content .field input{font-size:16px}
+.discount-content .button{gap:14px;font-size:12px;text-transform:uppercase;padding:12px}
+.discount-consent,.discount-demo-note{font-size:10px!important;line-height:1.6!important;margin-top:12px}
+.discount-consent a{text-decoration:underline;text-underline-offset:3px}
+.discount-content>.text-link{margin-top:14px;font-size:12px;gap:10px}
+.discount-skip{display:block;margin:18px auto 0;padding:5px 0;font-size:11px;text-decoration:underline;text-underline-offset:4px;color:var(--muted)}
+.discount-success>.eyebrow{margin:16px 0}
+.discount-success>.button{margin-top:24px}
+.discount-success>.text-link{margin-top:18px;gap:10px;font-size:12px}
+@media(max-width:700px){
+ .discount-dialog{width:420px;grid-template-columns:1fr;max-height:calc(100dvh - 24px);overscroll-behavior:contain}
+ .discount-visual{height:110px;min-height:0}
+ .discount-visual img{object-position:76% 8%}
+ .discount-content{padding:22px 22px 20px}
+ .discount-content>.eyebrow{margin-bottom:10px;font-size:10px}
+ .discount-content h2{font-size:29px;line-height:1.08;margin-bottom:12px}
+ .discount-content .field{margin:14px 0 12px}
+ .discount-content .button{min-height:48px}
+ .discount-content p{font-size:12px}
+ .discount-skip{margin-top:12px;min-height:32px}
+ .discount-dialog .dialog-close{top:8px;right:8px}
+ .about-intro h1{font-size:52px}
+ .category-empty{height:175px;aspect-ratio:auto}
+}
+
 /* Four steps follow the supplied desktop and mobile reference. */
 .process{display:block;padding:0;border:0;scroll-margin-top:110px}
 .process>h2{font-size:38px;margin:0 0 26px;letter-spacing:-.5px}
@@ -79,7 +127,7 @@
 .process-icon svg{width:29px;height:29px;stroke-width:1.15}
 .process-copy{min-width:0}
 .process-number{display:block;font-size:13px;line-height:1.3;color:var(--muted)}
-.process-copy h3{font-size:26px;margin:2px 0 6px;line-height:1.1;white-space:nowrap}
+.process-copy h3{font-size:24px;margin:2px 0 6px;line-height:1.1;white-space:normal}
 .process-copy p{font-size:13px;line-height:1.5;max-width:175px}
 .process-arrow{position:absolute;right:-32px;top:50%;transform:translateY(-50%);width:20px;height:20px;stroke-width:1;color:#ac9a8a}
 @media(max-width:1280px) and (min-width:1101px){
@@ -95,7 +143,7 @@
  .process-steps{gap:28px}
  .process-step{flex-direction:column;gap:12px;text-align:center}
  .process-copy h3{font-size:24px;margin:0}
- .process-number,.process-copy p{display:none}
+ .process-number{display:none}.process-copy p{display:block;font-size:12px;margin-top:7px}
  .process-arrow{top:30px;right:-24px}
 }
 @media(max-width:760px){
@@ -105,7 +153,7 @@
  .process-step{gap:10px}
  .process-icon{flex-basis:50px;width:50px;height:50px}
  .process-icon svg{width:26px;height:26px}
- .process-copy h3{font-size:18px;line-height:1.2}
+ .process-copy h3{font-size:18px;line-height:1.2;white-space:normal;overflow-wrap:anywhere}
  .process-arrow{top:25px;right:-18px;width:16px;height:16px}
 }
 @media(max-width:400px){
@@ -116,6 +164,14 @@
 }
 
 /* Supplied product photography and multi-image galleries. */
+@media(max-width:700px){
+ .process-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 26px}
+ .process-copy h3{font-size:22px;line-height:1.12;overflow-wrap:normal;margin:4px 0 8px}
+ .process-copy p{font-size:12px;max-width:155px;margin:auto}
+ .process-number{display:block;font-size:11px}
+ .process-arrow{top:25px;right:-21px;width:16px;height:16px}
+ .process-step:nth-child(2) .process-arrow{display:none}
+}
 .photo-count{position:absolute;bottom:12px;left:12px;background:#fffaf4e8;color:var(--ink);padding:3px 8px;font-size:11px;line-height:1.5;border-radius:2px;pointer-events:none}
 .detail-photo .photo{object-fit:contain;object-position:center;background:#f2f1ee}
 .gallery-controls{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:10px}
@@ -126,3 +182,6 @@
 .thumbnails button{flex:0 0 72px;height:94px;scroll-snap-align:start}
 .thumbnails button[aria-pressed=true]{border-color:var(--wine)}
 @media(max-width:760px){.thumbnails button{flex-basis:62px;height:82px}.photo-count{bottom:8px;left:8px;font-size:10px}.gallery-controls{gap:20px;margin-top:8px}}
+
+.footer-top>p{display:block}
+@media(max-width:700px){.footer-top>p{grid-column:span 2;font-size:13px}}
