@@ -22,7 +22,7 @@ export function DiscountPopup({settings,blocked,onCatalog,onBook}:{settings:Sett
         let outcome:PopupOutcome|null=null;
         try{outcome=JSON.parse(localStorage.getItem(popupKeys.cooldown)||'null');shown=shown||sessionStorage.getItem(popupKeys.shown)==='yes';}catch{}
         const focused=document.activeElement?.matches('input,textarea,select,[contenteditable="true"]')||false;
-        const anotherModal=!!document.querySelector('[role="dialog"],[aria-modal="true"]');
+        const anotherModal=!!document.querySelector('[role="dialog"],[aria-modal="true"],.filter-overlay');
         if(popupDue(settings,Date.now(),loadedAt,shown,outcome,blocked||focused||anotherModal||document.visibilityState!=='visible')){
           shown=true;try{sessionStorage.setItem(popupKeys.shown,'yes');}catch{}
           clearInterval(timer);setOpen(true);track('discount_popup_view','popup_discount');
@@ -51,7 +51,7 @@ export function DiscountPopup({settings,blocked,onCatalog,onBook}:{settings:Sett
   return <Dialog title={success?'Ваша скидка за вами':settings.popupHeading} className="discount-dialog" onClose={close}>
     <div className="discount-visual"><img src={assetHref(settings.popupImage)} alt="Персональный стиль в Формуле Элегантности"/></div>
     <div className="discount-content">{success?<div className="discount-success" role="status">
-      <Check size={28}/><span className="eyebrow">ВАША СКИДКА ЗА ВАМИ</span><h2>Спасибо за знакомство</h2><p>Спасибо! Мы свяжемся с вами по указанному номеру. А пока можно выбрать вещи и готовые образы, которые вы захотите примерить.</p>
+      <Check size={28}/><span className="eyebrow">ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ</span><h2>Ваша скидка за вами</h2><p>Спасибо! Мы свяжемся с вами по указанному номеру. А пока можно выбрать вещи и готовые образы, которые вы захотите примерить.</p>
       <button className="button full-width" onClick={()=>{track('discount_popup_catalog','popup_discount');setOpen(false);onCatalog();}}>Смотреть каталог <ArrowRight size={17}/></button>
       <button className="text-link" onClick={()=>{track('discount_popup_fitting','popup_discount');setOpen(false);onBook();}}>Записаться к стилисту <ArrowRight size={17}/></button>
     </div>:<>
