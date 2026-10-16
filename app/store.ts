@@ -12,8 +12,11 @@ export async function loadStore(){
   looks=[...collectionLooks.map(p=>lo.get(p.id)||p),...Array.from(lo.values()).filter((p:any)=>!collectionLooks.some(d=>d.id===p.id))];
   const config=rows.find(r=>r.kind==='settings'); if(config) settings={...defaultSettings,...JSON.parse(config.payload)};
   products=products.map(p=>({...p,category:normalizeCategory(p.category)}));
+  const legacySpace=settings.space==='/images/space.webp';
   const legacyCategories=settings.categories.some(c=>['Костюмы','Жакеты','Жилеты','Блузы и рубашки','Трикотаж'].includes(c));
   settings={...settings,
+   space:legacySpace?defaultSettings.space:settings.space,
+   makeupImage:legacySpace&&!settings.makeupImage?defaultSettings.makeupImage:settings.makeupImage,
    address:['Москва, ул. Неглинная 8/10','Москва, ул. Неглинная, 8/10','Неглинная 8/10'].includes(settings.address)?defaultSettings.address:settings.address,
    about:settings.about.replace('Здесь можно спокойно примерить вещи со стилистом и завершить образ макияжем от профессионального визажиста.','Здесь можно подобрать вещи как самостоятельно, так и со стилистом, а затем завершить образ макияжем от профессионального визажиста и укладкой.'),
    categories:legacyCategories?[...categories,...settings.categories.filter(c=>!['Костюмы',...categories].includes(normalizeCategory(c))).map(normalizeCategory)]:Array.from(new Set(settings.categories.filter(c=>c!=='Костюмы').map(normalizeCategory)))

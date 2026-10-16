@@ -1,0 +1,65 @@
+[
+  {
+    "image": "/images/showroom/showroom-main.webp",
+    "alt": "Шоурум на Неглинной",
+    "kind": "showroom",
+    "source": "IMG_9526.PNG",
+    "width": 1122,
+    "height": 1402,
+    "sourceSha256": "20e2548a42f36333ff04c849b4554901cc141c4e92fd1fadf7d8415685b91a83"
+  },
+  {
+    "image": "/images/showroom/coffee-corner.webp",
+    "alt": "Зона знакомства за чашкой кофе",
+    "kind": "showroom",
+    "source": "IMG_9531.PNG",
+    "width": 1122,
+    "height": 1402,
+    "sourceSha256": "b8ec99821f7943d6a69b394bdb74f463f2152bbc6e29a92e0d40d3b28ad662f1"
+  },
+  {
+    "image": "/images/showroom/collection-details.webp",
+    "alt": "Фактуры и аксессуары коллекции",
+    "kind": "showroom",
+    "source": "IMG_9527.PNG",
+    "width": 1122,
+    "height": 1402,
+    "sourceSha256": "9d1dd6b93c305082be1c8ea58273cc9e762af2bc762d01cc8e8d8987257cc850"
+  },
+  {
+    "image": "/images/showroom/collection-rails.webp",
+    "alt": "Коллекция в шоуруме",
+    "kind": "showroom",
+    "source": "IMG_9528.PNG",
+    "width": 1122,
+    "height": 1402,
+    "sourceSha256": "a8f6a2f3032bbfb518a7afd6d97492cea6bc334eaf0f2e3fa6c0f69ebe6f9db6"
+  },
+  {
+    "image": "/images/showroom/wardrobe-details.webp",
+    "alt": "Одежда и аксессуары",
+    "kind": "showroom",
+    "source": "IMG_9532.PNG",
+    "width": 1122,
+    "height": 1402,
+    "sourceSha256": "83b6c3c842305f866dcefdf3e7b77869a8a84955293bcda08de3f5a92a9f808a"
+  },
+  {
+    "image": "/images/showroom/fitting-room.webp",
+    "alt": "Примерочная",
+    "kind": "showroom",
+    "source": "IMG_9530.JPG",
+    "width": 1122,
+    "height": 1402,
+    "sourceSha256": "531ecf1cad99c840199f931eca88184ff3df99b5a91a9db8ebfae659d29f33bd"
+  },
+  {
+    "image": "/images/showroom/makeup-room.webp",
+    "alt": "Гримёрка с зеркалом с подсветкой",
+    "kind": "makeup",
+    "source": "IMG_9529.PNG",
+    "width": 1122,
+    "height": 1402,
+    "sourceSha256": "1c368334d20b486b937cdb604f965639b71020477a3d4db6e0495ddd896ee4bd"
+  }
+]

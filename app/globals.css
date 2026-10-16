@@ -74,7 +74,6 @@
 h1 i,h2 i,h3 i,.hero-note i{font-style:normal;font-synthesis:none}
 .about-intro h1{overflow-wrap:normal;font-size:clamp(48px,5vw,72px)}
 .two-text-columns h2{line-height:1.12}
-.makeup-room{width:100%;height:320px;object-fit:cover;margin-top:24px}
 .category-empty{display:flex;align-items:center;justify-content:center;aspect-ratio:3/4;background:#ded2c4;color:var(--ink);min-height:175px}
 .category-empty svg{width:40px;height:40px;stroke-width:1}
 .messengers{gap:12px}
@@ -185,3 +184,47 @@ h1 i,h2 i,h3 i,.hero-note i{font-style:normal;font-synthesis:none}
 
 .footer-top>p{display:block}
 @media(max-width:700px){.footer-top>p{grid-column:span 2;font-size:13px}}
+
+/* Photos supplied by the showroom. Portraits keep their original proportions. */
+.room-photo{position:relative;display:block;width:100%;padding:0;overflow:hidden;background:var(--cream);text-align:left;min-width:0}
+.room-photo .photo{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.room-photo-caption{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:30px 18px 15px;color:var(--white);background:linear-gradient(transparent,#241b14b8);font-size:12px;line-height:1.5}
+.room-photo-caption svg{flex-shrink:0}
+.space-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.space-pair .photo{height:auto}
+.makeup-feature{display:grid;grid-template-columns:1fr .85fr;align-items:center;gap:60px;padding:40px;background:var(--cream);scroll-margin-top:12px}
+.makeup-photo{max-width:420px;justify-self:end}
+.makeup-copy{padding:8px 10px}
+.makeup-copy .eyebrow{color:var(--wine);margin-bottom:20px}
+.makeup-copy h2{font-size:clamp(38px,3.8vw,54px);line-height:1.08;margin-bottom:24px}
+.makeup-copy p{font-size:15px;max-width:430px}
+.makeup-copy .button{margin-top:28px}
+.showroom-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.collection-gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
+.collection-gallery button:nth-child(1){grid-column:auto}
+.collection-gallery .photo{height:auto;aspect-ratio:3/4;object-fit:contain;background:var(--cream)}
+.about-gallery-link{margin:0 0 35px}
+.contact-image .photo{object-position:center 20%}
+@media(max-width:1100px){
+ .makeup-feature{gap:32px;padding:28px}
+ .makeup-copy{padding:0}
+ .makeup-copy h2{font-size:40px}
+ .room-photo-caption{font-size:11px;padding:30px 12px 12px}
+}
+@media(max-width:760px){
+ .space-pair{gap:10px}
+ .space-pair .photo{height:auto}
+ .makeup-feature{grid-template-columns:1fr;padding:24px;gap:28px;scroll-margin-top:12px}
+ .makeup-photo{grid-row:1}
+ .makeup-copy .eyebrow{margin-bottom:12px}
+ .makeup-copy h2{font-size:38px;line-height:1.08;margin-bottom:18px}
+ .makeup-copy p{font-size:14px;max-width:none}
+ .makeup-copy .button{margin-top:22px;width:100%;gap:14px;font-size:12px}
+ .showroom-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .room-photo-caption{font-size:10px;padding:26px 10px 10px;gap:6px}
+ .room-photo-caption svg{width:15px;height:15px}
+ .collection-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .collection-gallery>button:nth-child(1),.collection-gallery>button:nth-child(2){grid-column:auto}
+ .collection-gallery>button .photo{height:auto}
+ .about-intro>.photo{height:auto;aspect-ratio:4/5}
+}
