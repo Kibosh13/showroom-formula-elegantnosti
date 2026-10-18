@@ -82,7 +82,7 @@ export const server=createServer(async(incoming,outgoing)=>{
   const result=await handle(req,String(passengerAddress||incoming.socket.remoteAddress||'unknown'));
   outgoing.setHeader('X-Content-Type-Options','nosniff');outgoing.setHeader('X-Frame-Options','DENY');outgoing.setHeader('Referrer-Policy','strict-origin-when-cross-origin');
   outgoing.setHeader('Permissions-Policy','camera=(), microphone=(), geolocation=()');
-  outgoing.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self'; connect-src 'self'; frame-src https://maps.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'");
+  outgoing.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self'; connect-src 'self'; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'");
   if((incoming.url||'').startsWith('/api/')||(incoming.url||'').startsWith('/admin')){outgoing.setHeader('Cache-Control','no-store');outgoing.setHeader('X-Robots-Tag','noindex, nofollow');}
   else if(result.headers.get('Content-Type')?.includes('text/html'))outgoing.setHeader('Cache-Control','no-cache');
   result.headers.forEach((value,key)=>outgoing.setHeader(key,value));outgoing.writeHead(result.status);
