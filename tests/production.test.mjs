@@ -25,7 +25,7 @@ try{
  assert.match(await(await call('/product/'+product.id)).text(),/ТЕСТ CMS/);
  assert.equal((await call('/api/admin',{action:'archive',kind:'product',id:product.id})).status,200);assert.equal((await call('/product/'+product.id)).status,404);
  assert.equal((await call('/api/admin',{action:'restore',kind:'product',id:product.id})).status,200);
- const settings={...data.settings,intro:"Проверка сохранения CMS $& $$ $' $`",seo:{'/about':{title:'SEO заголовок',description:'Описание для поиска'}},pages:[{slug:'test-page',title:'Тестовая страница',text:'<script>alert(1)</script>',image:'',published:true}]};
+ const settings={...data.settings,bookingTimes:['12:30'],intro:"Проверка сохранения CMS $& $$ $' $`",seo:{'/about':{title:'SEO заголовок',description:'Описание для поиска'}},pages:[{slug:'test-page',title:'Тестовая страница',text:'<script>alert(1)</script>',image:'',published:true}]};
  assert.equal((await call('/api/admin',{action:'save',kind:'settings',id:'settings',payload:settings})).status,200);
  const homeHtml=await(await call('/')).text();assert.match(homeHtml,/Проверка сохранения CMS/);const bootstrap=JSON.parse(homeHtml.match(/<script id="site-data" type="application\/json">(.*?)<\/script>/s)[1]);assert.equal(bootstrap.settings.intro,settings.intro);
  const custom=await call('/test-page');assert.equal(custom.status,200);assert.match(await custom.text(),/&lt;script&gt;alert/);
@@ -35,7 +35,7 @@ try{
  assert.match((await call('/admin')).headers.get('x-robots-tag'),/noindex/);
  assert.equal((await call('/private-data/config.json')).status,404);
  const body={kind:'fitting',name:'Проверка движка',phone:'+79001234567',consent:true,context:'Автотест',source:'website'};
- assert.equal((await call('/api/leads',{...body,consent:false})).status,400);
+ assert.equal((await call('/api/leads',{...body,consent:false})).status,400);assert.equal((await call('/api/leads',{...body,time:'11:00'})).status,400);assert.equal((await call('/api/leads',{...body,time:'12:30'})).status,200);
  assert.equal((await call('/api/leads',body,{foreign:true})).status,403);
  const lead=await call('/api/leads',body);assert.equal(lead.status,200);const leadId=(await lead.json()).id;
  data=await(await call('/api/admin')).json();assert.ok(data.leads.find(l=>l.id===leadId));

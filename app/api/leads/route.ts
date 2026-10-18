@@ -14,9 +14,9 @@ export async function POST(req:Request){
   const recent=await db().prepare('SELECT count(*) as n FROM leads WHERE phone=? AND created_at>?').bind(phone,new Date(Date.now()-3600000).toISOString()).first<{n:number}>();
   if((recent?.n||0)>=5)return Response.json({error:'Слишком много заявок. Свяжитесь с нами по телефону.'},{status:429});
   if(b.date){const now=new Date(Date.now()+10800000).toISOString().slice(0,10);if(!/^\d{4}-\d{2}-\d{2}$/.test(b.date)||b.date<now)return Response.json({error:'Выберите будущую дату'},{status:400});}
-  if(b.time&&!/^(11|12|13|14|15|16|17|18|19):00$/.test(b.time))return Response.json({error:'Выберите время в часы работы'},{status:400});
   if(b.kind==='certificate'&&(!Number.isInteger(Number(b.amount))||Number(b.amount)<1000||Number(b.amount)>200000))return Response.json({error:'Укажите номинал от 1 000 до 200 000 ₽'},{status:400});
   const {settings,products}=await loadStore();
+  if(b.time&&!settings.bookingTimes.includes(String(b.time)))return Response.json({error:'Выберите доступное время.'},{status:400});
   if(discount&&(!settings.popupEnabled||(settings.popupExpires&&Date.now()>new Date(settings.popupExpires+'T23:59:59+03:00').getTime())))return Response.json({error:'Предложение больше не действует.'},{status:400});
   let promo=null;if(b.promo){promo=settings.promos.find(p=>p.active&&p.code.toUpperCase()===String(b.promo).trim().toUpperCase());if(!promo)return Response.json({error:'Промокод не найден или больше не действует'},{status:400});}
   if(b.productId){const product=products.find(p=>p.id===b.productId&&p.published);if(!product)return Response.json({error:'Товар больше не доступен'},{status:400});if(b.size&&!product.sizes.includes(b.size))return Response.json({error:'Выберите доступный размер'},{status:400});}
