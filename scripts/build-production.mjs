@@ -1,0 +1,12 @@
+import {build as viteBuild} from 'vite';
+import {build} from 'esbuild';
+import {mkdir,copyFile,writeFile,rename} from 'node:fs/promises';
+import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..');
+await viteBuild({configFile:path.join(root,'production/vite.config.ts')});
+await mkdir(path.join(root,'dist-production'),{recursive:true});
+await rename(path.join(root,'dist-production/public/index.html'),path.join(root,'dist-production/template.html'));
+await build({entryPoints:[path.join(root,'production/server.tsx')],outfile:path.join(root,'dist-production/server.cjs'),bundle:true,platform:'node',target:'node22',format:'cjs',jsx:'automatic',alias:{'cloudflare:workers':path.join(root,'production/runtime.ts')},define:{__FE_STATIC_DEMO__:'false',__FE_BASE_PATH__:JSON.stringify(''),'process.env.NODE_ENV':JSON.stringify('production')},minify:true});
+await copyFile(path.join(root,'production/README.md'),path.join(root,'dist-production/README.md'));
+await writeFile(path.join(root,'dist-production/package.json'),JSON.stringify({name:'formula-elegantnosti-production',private:true,scripts:{start:'node server.cjs'},engines:{node:'>=22.13.0'}},null,2)+'\n');
+console.log('Production build ready: standalone Node server, SQLite and persistent media outside public/.');

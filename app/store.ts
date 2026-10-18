@@ -21,6 +21,8 @@ export async function loadStore(){
    about:settings.about.replace('Здесь можно спокойно примерить вещи со стилистом и завершить образ макияжем от профессионального визажиста.','Здесь можно подобрать вещи как самостоятельно, так и со стилистом, а затем завершить образ макияжем от профессионального визажиста и укладкой.'),
    categories:legacyCategories?[...categories,...settings.categories.filter(c=>!['Костюмы',...categories].includes(normalizeCategory(c))).map(normalizeCategory)]:Array.from(new Set(settings.categories.filter(c=>c!=='Костюмы').map(normalizeCategory)))
   };
+  const ordered=(list:any[],ids:string[])=>[...list].sort((a,b)=>(ids.includes(a.id)?ids.indexOf(a.id):10000)-(ids.includes(b.id)?ids.indexOf(b.id):10000));
+  products=ordered(products,settings.productOrder);looks=ordered(looks,settings.lookOrder);
   reviews=rows.filter(r=>r.kind==='review').map(r=>({id:r.id,...JSON.parse(r.payload)})).filter(r=>r.published);
  } catch{ console.error('Catalogue data unavailable; serving imported catalogue'); }
  return {products:products as Product[],looks:looks as Look[],settings:settings as Settings,reviews};

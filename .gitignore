@@ -62,6 +62,8 @@ next-env.d.ts
 # Private databases, local demo builds and temporary artefacts
 /dist-demo/
 /.demo-render/
+/dist-production/
+/private-data/
 /.cache/
 /tmp/
 /temp/

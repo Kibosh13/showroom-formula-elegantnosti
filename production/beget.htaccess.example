@@ -1,0 +1,17 @@
+# Replace /ABSOLUTE/SITE/ROOT with the existing Beget site's directory.
+# public_html points to current/public. app.cjs lives at the site root.
+Options -Indexes
+PassengerEnabled on
+PassengerNodejs /ABSOLUTE/SITE/ROOT/runtime/node
+PassengerAppRoot /ABSOLUTE/SITE/ROOT
+PassengerAppType node
+PassengerStartupFile app.cjs
+PassengerAppEnv production
+RewriteEngine On
+RewriteRule ^\.well-known/acme-challenge/ - [L]
+RewriteRule ^healthz$ - [L]
+RewriteCond %{HTTP_HOST} !^formulaelegantnosti\.ru$ [NC]
+RewriteRule ^ https://formulaelegantnosti.ru%{REQUEST_URI} [R=301,L,NE]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+RewriteRule ^ https://formulaelegantnosti.ru%{REQUEST_URI} [R=301,L,NE]

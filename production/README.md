@@ -1,0 +1,13 @@
+# Production engine on Beget
+
+Build with Node >=22.13: `npm run build:production`. Runtime requires only Node >=22.13; the server is bundled and has no node_modules dependency. Passenger runs `server.cjs` with the application root above `public/`.
+
+Set `FE_DATA_DIR` to a private persistent directory outside the document root. Put a private `config.json` there, using `config.example.json` as a template. Required keys: `ADMIN_PASSWORD` (unique random key, at least 24 characters), `SITE_URL` (HTTPS canonical origin), `SITE_INDEXING` (`enabled` for production). Optional: `CONTENT_PASSWORD`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `RESEND_API_KEY`, `NOTIFICATION_EMAIL`, `NOTIFICATION_FROM`. On a normal server, use mode 0600; on Beget, preserve the hosting provider's per-site ACL so that the site's isolated process and the hosting owner can access the data. Do not grant access to other sites or the public. Do not put hosting credentials or config files in Git or public/.
+
+SQLite, uploads and backups remain in FE_DATA_DIR across application releases. Stop writers or use the admin backup action (SQLite VACUUM INTO) for a consistent backup. Retain backups off the server as well. Restore by stopping the application, replacing the database with a verified backup and restarting. Never copy a live SQLite database without its WAL.
+
+Keep releases separate and switch the application symlink only after checking `/healthz`. Preserve the previous release for rollback. Touch `tmp/restart.txt` in the Passenger application root after switching. Preserve data directories during every update; never rsync --delete into them. Adapt `beget-app.cjs.example` and `beget.htaccess.example` to the actual site root. The HTML template must stay outside public/ so Apache cannot serve an unhydrated template in place of the server-rendered home page. Enable HTTPS redirect only with a valid installed certificate; the ACME challenge path remains available for automatic renewal.
+
+`/admin` uses an HttpOnly, Secure, SameSite=Strict eight-hour cookie and requires the administrator/content key. Login requests and public submissions are rate limited. API writes check Origin; media uploads accept verified JPEG/PNG/WebP signatures only. Private data and audit logs have no public download route. Admin backup copies stay private on the server.
+
+GitHub Pages stays a separate static demo (`npm run build:demo`) with noindex and disabled forms/admin. Production serves real database-backed submissions and content. Payments and automatic notifications require the business's provider credentials and are not simulated.

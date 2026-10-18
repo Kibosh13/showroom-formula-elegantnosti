@@ -14,7 +14,9 @@
     "db:generate": "drizzle-kit generate",
     "build:demo": "node scripts/build-demo.mjs",
     "preview:demo": "vite preview --config demo/vite.config.ts --host 127.0.0.1",
-    "test:popup": "node scripts/test-popup.mjs"
+    "test:popup": "node scripts/test-popup.mjs",
+    "build:production": "node scripts/build-production.mjs",
+    "test:production": "node scripts/build-production.mjs && node tests/production.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

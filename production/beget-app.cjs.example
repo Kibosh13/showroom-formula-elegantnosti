@@ -1,0 +1,4 @@
+const path=require('node:path');
+process.env.FE_DATA_DIR=path.join(__dirname,'private-data');
+process.chdir(path.join(__dirname,'current'));
+require('./current/server.cjs');

@@ -1,0 +1,918 @@
+{
+  "copy_5cbb68967e": {
+    "text": "Как работает «Формула Элегантности»",
+    "group": "VisitProcess"
+  },
+  "copy_17b39be17d": {
+    "text": "фото",
+    "group": "Card"
+  },
+  "copy_4fbae15388": {
+    "text": "Сейчас нет в наличии",
+    "group": "Card"
+  },
+  "copy_5af0411927": {
+    "text": "Смотреть",
+    "group": "LookCard"
+  },
+  "copy_cfc7caa9df": {
+    "text": "ГРИМЁРКА",
+    "group": "MakeupRoom"
+  },
+  "copy_4808c8c55e": {
+    "text": "Макияж и укладка",
+    "group": "MakeupRoom"
+  },
+  "copy_c5fbb2b34d": {
+    "text": "завершают ваш образ",
+    "group": "MakeupRoom"
+  },
+  "copy_58b20f36c2": {
+    "text": "После подбора гардероба можно завершить образ профессиональным макияжем от визажиста и укладкой. Всё — за один визит и в комфортном темпе.",
+    "group": "MakeupRoom"
+  },
+  "copy_af322e1d62": {
+    "text": "Записаться к стилисту",
+    "group": "Storefront"
+  },
+  "copy_805a3889f8": {
+    "text": "ПРИГЛАШАЕМ В ШОУРУМ",
+    "group": "Contacts"
+  },
+  "copy_355edfc3b3": {
+    "text": "В самом",
+    "group": "Contacts"
+  },
+  "copy_6862cec796": {
+    "text": "центре",
+    "group": "Contacts"
+  },
+  "copy_bec7cc444c": {
+    "text": "Москвы",
+    "group": "Contacts"
+  },
+  "copy_09f303b1b9": {
+    "text": "Как нас найти",
+    "group": "Contacts"
+  },
+  "copy_175db3766d": {
+    "text": "Ежедневно,",
+    "group": "Storefront"
+  },
+  "copy_41d95baa0f": {
+    "text": "Заказать обратный звонок",
+    "group": "Contacts"
+  },
+  "copy_0acfb66819": {
+    "text": "Открыть на Яндекс Картах",
+    "group": "Contacts"
+  },
+  "copy_ffddd31c12": {
+    "text": "Главная",
+    "group": "Bread"
+  },
+  "copy_46e27e2f0a": {
+    "text": "Каталог",
+    "group": "Storefront"
+  },
+  "copy_86ba0ca354": {
+    "text": "ПРОСТРАНСТВО ПЕРСОНАЛЬНОГО СТИЛЯ",
+    "group": "Home"
+  },
+  "copy_896f29df5a": {
+    "text": "Ваш идеальный",
+    "group": "Home"
+  },
+  "copy_fd749db16d": {
+    "text": "гардероб и",
+    "group": "Home"
+  },
+  "copy_9c51d006b8": {
+    "text": "готовый",
+    "group": "Home"
+  },
+  "copy_3d7979f52b": {
+    "text": "образ",
+    "group": "Home"
+  },
+  "copy_4c2efb65f9": {
+    "text": "за 1 визит",
+    "group": "Home"
+  },
+  "copy_077a7519ef": {
+    "text": "В самом центре Москвы",
+    "group": "Home"
+  },
+  "copy_4ff2c5d3b7": {
+    "text": "Смотреть каталог",
+    "group": "Home"
+  },
+  "copy_7de4521602": {
+    "text": "Готовые образы",
+    "group": "Storefront"
+  },
+  "copy_a0917e54b9": {
+    "text": "Классика,",
+    "group": "Home"
+  },
+  "copy_be35a86e51": {
+    "text": "которая подчёркивает",
+    "group": "Home"
+  },
+  "copy_db96e918fc": {
+    "text": "вас",
+    "group": "Home"
+  },
+  "copy_18b59281f7": {
+    "text": "НОВЫЙ ВЗГЛЯД НА КЛАССИКУ",
+    "group": "Home"
+  },
+  "copy_91fc1d5ac2": {
+    "text": "ВЫБОР НА ЭТОТ СЕЗОН",
+    "group": "Home"
+  },
+  "copy_3fb2d64b4c": {
+    "text": "Выбор",
+    "group": "Home"
+  },
+  "copy_33b6b88003": {
+    "text": "шоурума",
+    "group": "Home"
+  },
+  "copy_5c3f478f2e": {
+    "text": "Смотреть все",
+    "group": "Home"
+  },
+  "copy_70dccac50e": {
+    "text": "ИСКУССТВО СОЧЕТАНИЙ",
+    "group": "Home"
+  },
+  "copy_225ea211b8": {
+    "text": "Не просто вещи.",
+    "group": "Home"
+  },
+  "copy_b6a63f68a5": {
+    "text": "Готовые образы.",
+    "group": "Home"
+  },
+  "copy_d3c2ad2a14": {
+    "text": "Всё уже продумано.",
+    "group": "Home"
+  },
+  "copy_b9df7445d0": {
+    "text": "Осталось выбрать своё.",
+    "group": "Home"
+  },
+  "copy_4c75a99a36": {
+    "text": "Смотреть образы",
+    "group": "Home"
+  },
+  "copy_b94d123a45": {
+    "text": "Цены, доступные размеры и наличие уточняйте перед визитом в шоурум.",
+    "group": "Home"
+  },
+  "copy_636cce67f0": {
+    "text": "МЕНЬШЕ ВЕЩЕЙ. БОЛЬШЕ СОЧЕТАНИЙ.",
+    "group": "Home"
+  },
+  "copy_e045175541": {
+    "text": "Ваш гардероб",
+    "group": "Home"
+  },
+  "copy_e506880a3a": {
+    "text": "в гармонии",
+    "group": "LooksPage"
+  },
+  "copy_904d01e9ec": {
+    "text": "Все капсулы",
+    "group": "Home"
+  },
+  "copy_06990ba0b0": {
+    "text": "НАШЕ ПРОСТРАНСТВО",
+    "group": "Home"
+  },
+  "copy_d0890a378c": {
+    "text": "Стиль, атмосфера",
+    "group": "Home"
+  },
+  "copy_3434995cc2": {
+    "text": "и внимание к",
+    "group": "Home"
+  },
+  "copy_5b56b90b55": {
+    "text": "каждой детали",
+    "group": "Home"
+  },
+  "copy_6e5e38468c": {
+    "text": "Капсульный гардероб от стилиста. Макияж от профессионального визажиста. Время, посвящённое только вам.",
+    "group": "Home"
+  },
+  "copy_82df46e4a3": {
+    "text": "Подробнее о нас",
+    "group": "Home"
+  },
+  "copy_30e994681c": {
+    "text": "КОМПЛИМЕНТ ОТ ШОУРУМА",
+    "group": "Home"
+  },
+  "copy_8ccd653c5e": {
+    "text": "Макияж",
+    "group": "Services"
+  },
+  "copy_fbe5b7df26": {
+    "text": "в подарок",
+    "group": "Services"
+  },
+  "copy_0c767646f6": {
+    "text": "При покупке одежды на сумму свыше 25 000 ₽",
+    "group": "Home"
+  },
+  "copy_f5d130f50e": {
+    "text": "Собрать полный образ",
+    "group": "Home"
+  },
+  "copy_67e16da299": {
+    "text": "Фильтры",
+    "group": "Catalog"
+  },
+  "copy_19c85838e6": {
+    "text": "Категория",
+    "group": "Catalog"
+  },
+  "copy_98713e8814": {
+    "text": "Размер",
+    "group": "BookingForm"
+  },
+  "copy_84b22ed2aa": {
+    "text": "Цвет",
+    "group": "Catalog"
+  },
+  "copy_367e2792c1": {
+    "text": "Цена",
+    "group": "Catalog"
+  },
+  "copy_a354313c21": {
+    "text": "До, ₽",
+    "group": "Catalog"
+  },
+  "copy_19114f713f": {
+    "text": "Материал",
+    "group": "Catalog"
+  },
+  "copy_7d2f474846": {
+    "text": "Все материалы",
+    "group": "Catalog"
+  },
+  "copy_30701b1471": {
+    "text": "Сезон",
+    "group": "Catalog"
+  },
+  "copy_2ad25128f2": {
+    "text": "Все сезоны",
+    "group": "Catalog"
+  },
+  "copy_0f855dd0c3": {
+    "text": "Сбросить все",
+    "group": "Catalog"
+  },
+  "copy_7788a11e4d": {
+    "text": "Показать",
+    "group": "Catalog"
+  },
+  "copy_e8aacb2245": {
+    "text": "товаров",
+    "group": "Catalog"
+  },
+  "copy_349d8044c4": {
+    "text": "КОЛЛЕКЦИЯ ФОРМУЛЫ ЭЛЕГАНТНОСТИ",
+    "group": "Catalog"
+  },
+  "copy_140a5d94f6": {
+    "text": "Помощь стилиста",
+    "group": "Catalog"
+  },
+  "copy_3ca04a1cbe": {
+    "text": "Современная классика. Продуманные сочетания. Вещи, в которых вы чувствуете себя собой.",
+    "group": "Catalog"
+  },
+  "copy_ed030118aa": {
+    "text": "Сортировка",
+    "group": "Catalog"
+  },
+  "copy_d0f767202a": {
+    "text": "Рекомендуемые",
+    "group": "Catalog"
+  },
+  "copy_1c8bb489f9": {
+    "text": "Новинки",
+    "group": "Catalog"
+  },
+  "copy_f47c8c1e39": {
+    "text": "Сначала дешевле",
+    "group": "Catalog"
+  },
+  "copy_6313933880": {
+    "text": "Сначала дороже",
+    "group": "Catalog"
+  },
+  "copy_2a1ee74d72": {
+    "text": "Сбросить всё",
+    "group": "Catalog"
+  },
+  "copy_b53ec8fb33": {
+    "text": "Показать ещё",
+    "group": "Catalog"
+  },
+  "copy_0aeb699812": {
+    "text": "Показано",
+    "group": "Catalog"
+  },
+  "copy_b6103a21e0": {
+    "text": "Перейти в каталог",
+    "group": "Catalog"
+  },
+  "copy_03ead01c5b": {
+    "text": "Сбросить фильтры",
+    "group": "Catalog"
+  },
+  "copy_ed6c41a9ac": {
+    "text": "Фотографии коллекции предоставлены шоурумом. Цены, размеры и наличие уточняйте у менеджера.",
+    "group": "Catalog"
+  },
+  "copy_45edb67316": {
+    "text": "Увеличить",
+    "group": "ProductPage"
+  },
+  "copy_a7b56fd1b4": {
+    "text": "Демонстрационный товар · цена и характеристики для примера",
+    "group": "ProductPage"
+  },
+  "copy_f524ed912d": {
+    "text": "Цвет:",
+    "group": "ProductPage"
+  },
+  "copy_f6525808a6": {
+    "text": "Размер:",
+    "group": "ProductPage"
+  },
+  "copy_16b450c48e": {
+    "text": "Помощь с размером",
+    "group": "ProductPage"
+  },
+  "copy_1ed775e98c": {
+    "text": "Доступные размеры уточняются у менеджера.",
+    "group": "ProductPage"
+  },
+  "copy_d030196a62": {
+    "text": "Забронировать",
+    "group": "ProductPage"
+  },
+  "copy_235690921e": {
+    "text": "Наличие и выбранный размер подтвердим перед визитом.",
+    "group": "ProductPage"
+  },
+  "copy_ee422400ed": {
+    "text": "Состав и уход",
+    "group": "ProductPage"
+  },
+  "copy_766590dc91": {
+    "text": "Коллекция и примерка",
+    "group": "ProductPage"
+  },
+  "copy_ad0439e671": {
+    "text": "Примерка проходит в шоуруме:",
+    "group": "ProductPage"
+  },
+  "copy_96f8f0b7ee": {
+    "text": ". Стилист поможет подобрать посадку.",
+    "group": "ProductPage"
+  },
+  "copy_4d6d5962b3": {
+    "text": "СОВЕТ СТИЛИСТА",
+    "group": "ProductPage"
+  },
+  "copy_ec74af749c": {
+    "text": "Вещь становится",
+    "group": "ProductPage"
+  },
+  "copy_b00f169a63": {
+    "text": "образом",
+    "group": "ProductPage"
+  },
+  "copy_46f7ca1367": {
+    "text": "Смотреть образ",
+    "group": "ProductPage"
+  },
+  "copy_c6421f1bae": {
+    "text": "С чем",
+    "group": "ProductPage"
+  },
+  "copy_5c3f9d08b9": {
+    "text": "носить",
+    "group": "ProductPage"
+  },
+  "copy_09137efc4e": {
+    "text": "В каталог",
+    "group": "ProductPage"
+  },
+  "copy_3469610d70": {
+    "text": "СОЧЕТАНИЯ, В КОТОРЫХ ЕСТЬ ВЫ",
+    "group": "LooksPage"
+  },
+  "copy_0eca3c10f5": {
+    "text": "Гардероб",
+    "group": "LooksPage"
+  },
+  "copy_19ca544344": {
+    "text": "Готовые",
+    "group": "LooksPage"
+  },
+  "copy_b36206b53a": {
+    "text": "образы",
+    "group": "LooksPage"
+  },
+  "copy_d22133020a": {
+    "text": "Визуальная концепция. Реальные образы и состав подборок загрузим после получения ассортимента.",
+    "group": "LooksPage"
+  },
+  "copy_370ddaf79f": {
+    "text": "Примерить",
+    "group": "LookPage"
+  },
+  "copy_28e8446257": {
+    "text": "Предложение для примерки со стилистом",
+    "group": "LookPage"
+  },
+  "copy_e1fae885d9": {
+    "text": "В этом",
+    "group": "LookPage"
+  },
+  "copy_4feadaa8fc": {
+    "text": "образе",
+    "group": "LookPage"
+  },
+  "copy_19f25d5784": {
+    "text": "Ещё",
+    "group": "LookPage"
+  },
+  "copy_253e9f8f19": {
+    "text": "сочетания",
+    "group": "LookPage"
+  },
+  "copy_010a964b15": {
+    "text": "ВНИМАНИЕ К ВАШЕЙ ИНДИВИДУАЛЬНОСТИ",
+    "group": "Services"
+  },
+  "copy_a12267a224": {
+    "text": "Цены и",
+    "group": "Services"
+  },
+  "copy_54962a882d": {
+    "text": "предложения",
+    "group": "Services"
+  },
+  "copy_2bcba42f46": {
+    "text": "Всё для",
+    "group": "Services"
+  },
+  "copy_169fc37c53": {
+    "text": "вашего образа",
+    "group": "Services"
+  },
+  "copy_4d908282aa": {
+    "text": "Одежда, профессиональный взгляд стилиста и макияж в одном приватном пространстве.",
+    "group": "Services"
+  },
+  "copy_a272399684": {
+    "text": "При чеке свыше 25 000 ₽. Подробности акции уточните при записи.",
+    "group": "Services"
+  },
+  "copy_4ba9f2ada6": {
+    "text": "Записаться",
+    "group": "Storefront"
+  },
+  "copy_232b9b16ec": {
+    "text": "Подарок",
+    "group": "Services"
+  },
+  "copy_90e85a2876": {
+    "text": "со вкусом",
+    "group": "Services"
+  },
+  "copy_cac97c5884": {
+    "text": "Подарочный сертификат — приглашение найти свой образ со стилистом.",
+    "group": "Services"
+  },
+  "copy_bf46d72d18": {
+    "text": "Выбрать сертификат",
+    "group": "Services"
+  },
+  "copy_c5d6e9a032": {
+    "text": "Бонусная",
+    "group": "Services"
+  },
+  "copy_c2792a4424": {
+    "text": "система",
+    "group": "Services"
+  },
+  "copy_fdd609da58": {
+    "text": "Узнайте об актуальных условиях бонусной программы в шоуруме или при записи.",
+    "group": "Services"
+  },
+  "copy_741e44ebbd": {
+    "text": "Уточнить условия",
+    "group": "Services"
+  },
+  "copy_680bc3304c": {
+    "text": "ФОРМУЛА ЭЛЕГАНТНОСТИ",
+    "group": "BookingForm"
+  },
+  "copy_6f86da753f": {
+    "text": "Пространство",
+    "group": "Storefront"
+  },
+  "copy_4087d1dca9": {
+    "text": "персонального стиля",
+    "group": "Storefront"
+  },
+  "copy_c7b01e9d4e": {
+    "text": "Без спешки.",
+    "group": "About"
+  },
+  "copy_036bd67f75": {
+    "text": "С вниманием к деталям.",
+    "group": "About"
+  },
+  "copy_c7d8b097b7": {
+    "text": "В комфортном темпе подбираем вещи под ваши задачи, события и образ жизни.",
+    "group": "About"
+  },
+  "copy_849b1790c2": {
+    "text": "Полный образ",
+    "group": "About"
+  },
+  "copy_887586bda3": {
+    "text": "в одном месте",
+    "group": "About"
+  },
+  "copy_903a0711b6": {
+    "text": "За один визит вы можете подготовиться к любому мероприятию — подобрать одежду по случаю и завершить образ профессиональным макияжем от визажиста и укладкой в нашей гримёрке.",
+    "group": "About"
+  },
+  "copy_5d31c45c42": {
+    "text": "Все фотографии шоурума",
+    "group": "About"
+  },
+  "copy_e751df3733": {
+    "text": "АТМОСФЕРА И ДЕТАЛИ",
+    "group": "Gallery"
+  },
+  "copy_bba69c8774": {
+    "text": "Наше пространство",
+    "group": "Gallery"
+  },
+  "copy_ea0fcbaad4": {
+    "text": "Шоурум, зона знакомства за чашкой кофе и примерочная на Неглинной.",
+    "group": "Gallery"
+  },
+  "copy_aeb9f7f997": {
+    "text": "Коллекция и образы",
+    "group": "Gallery"
+  },
+  "copy_d5ffc4de04": {
+    "text": "Фотографии шоурума и одежды предоставлены «Формулой Элегантности».",
+    "group": "Gallery"
+  },
+  "copy_662c7c5b44": {
+    "text": "ФОРМУЛА",
+    "group": "Storefront"
+  },
+  "copy_38306dbf95": {
+    "text": "ЭЛЕГАНТНОСТИ",
+    "group": "Storefront"
+  },
+  "copy_334e27a90f": {
+    "text": "ПОДАРОЧНЫЙ СЕРТИФИКАТ",
+    "group": "Certificates"
+  },
+  "copy_3bfaf13dbd": {
+    "text": "Приглашение найти свой образ",
+    "group": "Certificates"
+  },
+  "copy_97b243b4fc": {
+    "text": "ПОДАРИТЕ ВНИМАНИЕ К СЕБЕ",
+    "group": "Certificates"
+  },
+  "copy_abad074cb8": {
+    "text": "Элегантный",
+    "group": "Certificates"
+  },
+  "copy_c3293aa617": {
+    "text": "подарок",
+    "group": "Certificates"
+  },
+  "copy_0bc977046a": {
+    "text": "Подарочный сертификат на одежду и персональный подбор в нашем шоуруме.",
+    "group": "Certificates"
+  },
+  "copy_127390a598": {
+    "text": "Номинал сертификата, ₽",
+    "group": "Certificates"
+  },
+  "copy_ceee3ce112": {
+    "text": "Оставить заявку на сертификат",
+    "group": "Certificates"
+  },
+  "copy_c016444ead": {
+    "text": "Свяжемся для согласования оформления и оплаты. Онлайн-оплата пока не подключена.",
+    "group": "Certificates"
+  },
+  "copy_b2204a810f": {
+    "text": "ВАШ ОПЫТ В НАШЕМ ПРОСТРАНСТВЕ",
+    "group": "Reviews"
+  },
+  "copy_3ed6669dc4": {
+    "text": "Впечатления",
+    "group": "Reviews"
+  },
+  "copy_a211ba7b12": {
+    "text": "после визита",
+    "group": "Reviews"
+  },
+  "copy_b4034c9980": {
+    "text": "Поделитесь тем, что понравилось, и помогите нам стать лучше.",
+    "group": "Reviews"
+  },
+  "copy_476475f94a": {
+    "text": "Оставить отзыв",
+    "group": "Reviews"
+  },
+  "copy_5cc98a6b4f": {
+    "text": "Здесь будут ваши",
+    "group": "Reviews"
+  },
+  "copy_7a0c21687d": {
+    "text": "истории",
+    "group": "Reviews"
+  },
+  "copy_ff048c12f1": {
+    "text": "Отзывы появятся после первых публикаций. Каждый отзыв проходит проверку перед размещением.",
+    "group": "Reviews"
+  },
+  "copy_0f8c68acf4": {
+    "text": "При переходе в мессенджер или на карты вы открываете внешние сервисы. Юридические тексты для рабочего сайта будут согласованы перед запуском.",
+    "group": "Privacy"
+  },
+  "copy_4b545bff0d": {
+    "text": "Информация об обработке данных",
+    "group": "Privacy"
+  },
+  "copy_e6889a00eb": {
+    "text": "Проект для согласования перед публичным запуском",
+    "group": "Privacy"
+  },
+  "copy_709841293c": {
+    "text": "Оператор: ИП Панкова Анна Сергеевна. Контактный телефон:",
+    "group": "Privacy"
+  },
+  "copy_8c1c919588": {
+    "text": "Какие сведения передаются",
+    "group": "Privacy"
+  },
+  "copy_763e0a3718": {
+    "text": "Для персональной скидки передаются телефон, источник предложения, страница, UTM-метки и referrer при наличии. В форме записи передаются имя, контактный телефон, предпочтительный способ связи и сведения, которые вы добровольно добавляете: желаемая дата, время, комментарий, выбранный товар, образ или номинал сертификата.",
+    "group": "Privacy"
+  },
+  "copy_4de2a9aa99": {
+    "text": "Для чего они используются",
+    "group": "Privacy"
+  },
+  "copy_d5dde47dab": {
+    "text": "Для связи с вами, согласования визита, уточнения наличия, бронирования и оформления сертификата. Заявки сохраняются в закрытой панели управления. Отзывы публикуются после проверки; телефон не публикуется.",
+    "group": "Privacy"
+  },
+  "copy_912318ac1b": {
+    "text": "Связь с оператором",
+    "group": "Privacy"
+  },
+  "copy_a32dcb2ace": {
+    "text": "Для вопросов об обработке, изменении или удалении сведений свяжитесь с шоурумом по телефону",
+    "group": "Privacy"
+  },
+  "copy_a85c6289f5": {
+    "text": ". Отправка формы не подтверждает время визита и не означает оплату товара или сертификата.",
+    "group": "Privacy"
+  },
+  "copy_0325823106": {
+    "text": "Аналитика и хранение в браузере",
+    "group": "Privacy"
+  },
+  "copy_39adcd38b3": {
+    "text": "Избранное хранится на вашем устройстве. Фильтры и позиция каталога сохраняются в рамках сеанса. Учёт действий для аналитики включается только после вашего согласия.",
+    "group": "Privacy"
+  },
+  "copy_74432f8659": {
+    "text": "Изменить согласие на аналитику",
+    "group": "Privacy"
+  },
+  "copy_b8a9604777": {
+    "text": "Страница не найдена",
+    "group": "EmptyPage"
+  },
+  "copy_5a03637d4c": {
+    "text": "Вернуться в каталог",
+    "group": "EmptyPage"
+  },
+  "copy_db79c324c1": {
+    "text": "Панель управления",
+    "group": "Storefront"
+  },
+  "copy_38715939fc": {
+    "text": "Доступна только в полноценной серверной версии сайта.",
+    "group": "Storefront"
+  },
+  "copy_ef1ad90b17": {
+    "text": "На главную",
+    "group": "Storefront"
+  },
+  "copy_2b0acf6fbd": {
+    "text": "Перейти к содержимому",
+    "group": "Storefront"
+  },
+  "copy_d1ef89e899": {
+    "text": "к стилисту",
+    "group": "Storefront"
+  },
+  "copy_10fe708509": {
+    "text": "ВРЕМЯ ДЛЯ ВАС",
+    "group": "Storefront"
+  },
+  "copy_9b8ef2fc93": {
+    "text": "Подберём гардероб и готовый образ в комфортном темпе.",
+    "group": "Storefront"
+  },
+  "copy_4dff35a85c": {
+    "text": "Пространство персонального стиля",
+    "group": "Storefront"
+  },
+  "copy_eae4872859": {
+    "text": "Услуги и цены",
+    "group": "Storefront"
+  },
+  "copy_781459cae8": {
+    "text": "Сертификаты",
+    "group": "Storefront"
+  },
+  "copy_e6f95e75e2": {
+    "text": "Галерея",
+    "group": "Storefront"
+  },
+  "copy_8dc6ee4c95": {
+    "text": "Отзывы",
+    "group": "Storefront"
+  },
+  "copy_8438992a1b": {
+    "text": "© 2026 Формула Элегантности · ИП Панкова Анна Сергеевна",
+    "group": "Storefront"
+  },
+  "copy_45e0ef54b8": {
+    "text": "Обработка персональных данных",
+    "group": "Storefront"
+  },
+  "copy_e78eddeeb7": {
+    "text": "Управление сайтом",
+    "group": "Storefront"
+  },
+  "copy_3915e36ecb": {
+    "text": "Образы",
+    "group": "Storefront"
+  },
+  "copy_b880e6a105": {
+    "text": "Избранное",
+    "group": "Storefront"
+  },
+  "copy_1099f42c27": {
+    "text": "Разрешить учёт действий для улучшения сайта?",
+    "group": "Storefront"
+  },
+  "copy_079ecf704c": {
+    "text": "Только необходимые",
+    "group": "Storefront"
+  },
+  "copy_616bb19d6c": {
+    "text": "Разрешить",
+    "group": "Storefront"
+  },
+  "copy_52d680c79e": {
+    "text": "ЧАСТО ИЩУТ",
+    "group": "Storefront"
+  },
+  "copy_5a30aa14b4": {
+    "text": "результатов",
+    "group": "Storefront"
+  },
+  "copy_ccd290438f": {
+    "text": "Все результаты",
+    "group": "Storefront"
+  },
+  "copy_99f1056d08": {
+    "text": "Отправка заявок, запись, бронирование, отзывы и покупка сертификатов здесь отключены. Данные посетителей не собираются.",
+    "group": "BookingForm"
+  },
+  "copy_4a95d65e73": {
+    "text": "· размер",
+    "group": "BookingForm"
+  },
+  "copy_3026086da5": {
+    "text": "Продолжить просмотр",
+    "group": "BookingForm"
+  },
+  "copy_9dc2203dd0": {
+    "text": "ЗАЯВКА №",
+    "group": "BookingForm"
+  },
+  "copy_4df63e2ab2": {
+    "text": "Спасибо.",
+    "group": "BookingForm"
+  },
+  "copy_7787d6f19e": {
+    "text": "Всё начинается с вас.",
+    "group": "BookingForm"
+  },
+  "copy_b0c8592db1": {
+    "text": "Продолжить знакомство",
+    "group": "BookingForm"
+  },
+  "copy_af8db7a552": {
+    "text": "Ваше имя *",
+    "group": "BookingForm"
+  },
+  "copy_03c0645a38": {
+    "text": "Телефон *",
+    "group": "BookingForm"
+  },
+  "copy_d705f5a2e8": {
+    "text": "Как удобнее связаться?",
+    "group": "BookingForm"
+  },
+  "copy_534d2a33fc": {
+    "text": "Звонок",
+    "group": "BookingForm"
+  },
+  "copy_4c3938bbe4": {
+    "text": "Желаемая дата",
+    "group": "BookingForm"
+  },
+  "copy_c80d7e8172": {
+    "text": "Время",
+    "group": "BookingForm"
+  },
+  "copy_c02f0cfd31": {
+    "text": "Согласуем позже",
+    "group": "BookingForm"
+  },
+  "copy_52505738ff": {
+    "text": "Email для сертификата",
+    "group": "BookingForm"
+  },
+  "copy_17f79aebc9": {
+    "text": "Ваша оценка",
+    "group": "BookingForm"
+  },
+  "copy_b294841791": {
+    "text": "5 — отлично",
+    "group": "BookingForm"
+  },
+  "copy_d5cb9ffa54": {
+    "text": "4 — хорошо",
+    "group": "BookingForm"
+  },
+  "copy_4483fe3624": {
+    "text": "3 — есть замечания",
+    "group": "BookingForm"
+  },
+  "copy_ba0a6cc054": {
+    "text": "2 — не понравилось",
+    "group": "BookingForm"
+  },
+  "copy_2f8fc8a1df": {
+    "text": "1 — плохо",
+    "group": "BookingForm"
+  },
+  "copy_01a191694a": {
+    "text": "Промокод",
+    "group": "BookingForm"
+  },
+  "copy_d4cf4963cc": {
+    "text": "Ваш сайт",
+    "group": "BookingForm"
+  },
+  "copy_7c8d32c847": {
+    "text": "Я согласна на обработку персональных данных для связи по моей заявке.",
+    "group": "BookingForm"
+  },
+  "copy_7e427795b5": {
+    "text": "Подробнее",
+    "group": "BookingForm"
+  }
+}
