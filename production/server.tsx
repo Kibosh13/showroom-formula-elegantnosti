@@ -72,13 +72,14 @@ async function handle(req:Request,ip:string):Promise<Response>{
  const body=renderToString(<Storefront initialPath={pathname+url.search} {...publicStore}/>);
  const data=JSON.stringify(publicStore).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');
  const template=await readFile(path.join(__dirname,'template.html'),'utf8');
- return new Response(template.replace('<!--SITE_HEAD-->',head).replace('<!--SITE_BODY-->',body).replace('<script id="site-data" type="application/json">{}</script>',`<script id="site-data" type="application/json">${data}</script>`),{status:known?200:404,headers:{'Content-Type':'text/html; charset=utf-8'}});
+ return new Response(template.replace('<!--SITE_HEAD-->',()=>head).replace('<!--SITE_BODY-->',()=>body).replace('<script id="site-data" type="application/json">{}</script>',()=>`<script id="site-data" type="application/json">${data}</script>`),{status:known?200:404,headers:{'Content-Type':'text/html; charset=utf-8'}});
 }
 export const server=createServer(async(incoming,outgoing)=>{
  try{
   const chunks:Buffer[]=[];let bytes=0;for await(const chunk of incoming){bytes+=chunk.length;if(bytes>9*1024*1024){outgoing.writeHead(413);outgoing.end('Request too large');return;}chunks.push(chunk);}
   const req=new Request(origin+(incoming.url||'/'),{method:incoming.method,headers:incoming.headers as any,...(!['GET','HEAD'].includes(incoming.method||'GET')?{body:Buffer.concat(chunks)}:{})});
-  const result=await handle(req,incoming.socket.remoteAddress||'unknown');
+  const passengerAddress=process.env.FE_PASSENGER==='1'?incoming.headers['!~passenger-client-address']:null;
+  const result=await handle(req,String(passengerAddress||incoming.socket.remoteAddress||'unknown'));
   outgoing.setHeader('X-Content-Type-Options','nosniff');outgoing.setHeader('X-Frame-Options','DENY');outgoing.setHeader('Referrer-Policy','strict-origin-when-cross-origin');
   outgoing.setHeader('Permissions-Policy','camera=(), microphone=(), geolocation=()');
   outgoing.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self'; connect-src 'self'; frame-src https://maps.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'");

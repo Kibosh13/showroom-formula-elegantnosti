@@ -25,9 +25,9 @@ try{
  assert.match(await(await call('/product/'+product.id)).text(),/ТЕСТ CMS/);
  assert.equal((await call('/api/admin',{action:'archive',kind:'product',id:product.id})).status,200);assert.equal((await call('/product/'+product.id)).status,404);
  assert.equal((await call('/api/admin',{action:'restore',kind:'product',id:product.id})).status,200);
- const settings={...data.settings,intro:'Проверка сохранения CMS',seo:{'/about':{title:'SEO заголовок',description:'Описание для поиска'}},pages:[{slug:'test-page',title:'Тестовая страница',text:'<script>alert(1)</script>',image:'',published:true}]};
+ const settings={...data.settings,intro:"Проверка сохранения CMS $& $$ $' $`",seo:{'/about':{title:'SEO заголовок',description:'Описание для поиска'}},pages:[{slug:'test-page',title:'Тестовая страница',text:'<script>alert(1)</script>',image:'',published:true}]};
  assert.equal((await call('/api/admin',{action:'save',kind:'settings',id:'settings',payload:settings})).status,200);
- assert.match(await(await call('/')).text(),/Проверка сохранения CMS/);
+ const homeHtml=await(await call('/')).text();assert.match(homeHtml,/Проверка сохранения CMS/);const bootstrap=JSON.parse(homeHtml.match(/<script id="site-data" type="application\/json">(.*?)<\/script>/s)[1]);assert.equal(bootstrap.settings.intro,settings.intro);
  const custom=await call('/test-page');assert.equal(custom.status,200);assert.match(await custom.text(),/&lt;script&gt;alert/);
  assert.match(await(await call('/about')).text(),/<title>SEO заголовок/);
  assert.equal((await call('/api/admin',{action:'save',kind:'settings',id:'settings',payload:{...settings,navigation:[{label:'bad',url:'//evil.test'}]}})).status,400);
@@ -55,5 +55,6 @@ try{
  assert.equal((await call('/api/admin',{action:'save',kind:'settings',id:'settings',payload:settings})).status,403);assert.equal((await call('/api/admin',{action:'backup'})).status,403);assert.equal((await call('/api/admin',{action:'save',kind:'product',id:'settings',payload:{...product,id:'settings'}})).status,400);
  await stop();await start();
  login=await call('/api/admin',{action:'login',key:adminKey});cookie=login.headers.get('set-cookie').split(';')[0];data=await(await call('/api/admin')).json();assert.equal(data.settings.intro,settings.intro);const persistedLeads=await(await call('/api/admin?q='+encodeURIComponent('Проверка движка'))).json();assert.equal(persistedLeads.leads.find(l=>l.id===leadId).status,'Подтверждена');assert.ok(data.products.find(p=>p.id===product.id));assert.equal((await call(mediaUrl)).status,200);
+ for(let i=0;i<12;i++){const attempt=await fetch(origin+'/api/admin',{method:'POST',headers:{'Content-Type':'application/json',Origin:origin,'!~Passenger-Client-Address':'192.0.2.'+i},body:JSON.stringify({action:'login',key:'invalid'})});if(i===11)assert.equal(attempt.status,429);}
  console.log('Production integration checks passed: real SQLite persistence/restart, admin and editor roles, Origin checks, product archive/restore, CMS text/pages/SEO, escaped content, lead CRM, review moderation, verified uploads, private backups and indexing.');
 }finally{await stop();await rm(dir,{recursive:true,force:true});}

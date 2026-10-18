@@ -10,4 +10,6 @@ Keep releases separate and switch the application symlink only after checking `/
 
 `/admin` uses an HttpOnly, Secure, SameSite=Strict eight-hour cookie and requires the administrator/content key. Login requests and public submissions are rate limited. API writes check Origin; media uploads accept verified JPEG/PNG/WebP signatures only. Private data and audit logs have no public download route. Admin backup copies stay private on the server.
 
+The Beget wrapper enables `FE_PASSENGER=1`: rate limits then use Passenger's authenticated `!~Passenger-Client-Address` header, falling back to the socket address. A standalone Node deployment uses the socket address and ignores client-supplied proxy headers. See [Passenger secure HTTP headers](https://www.phusionpassenger.com/docs/advanced_guides/in_depth/node/secure_http_headers.html).
+
 GitHub Pages stays a separate static demo (`npm run build:demo`) with noindex and disabled forms/admin. Production serves real database-backed submissions and content. Payments and automatic notifications require the business's provider credentials and are not simulated.
