@@ -1,4 +1,5 @@
 import {createServer} from 'node:http';
+import {once} from 'node:events';
 import {readFile,stat} from 'node:fs/promises';
 import path from 'node:path';
 import {renderToString} from 'react-dom/server';
@@ -11,7 +12,7 @@ import * as leads from '../app/api/leads/route';
 import * as events from '../app/api/events/route';
 import * as upload from '../app/api/media/route';
 import * as media from '../app/media/[key]/route';
-import {env,audit,backup} from './runtime';
+import {env,audit,backup,exportLeads} from './runtime';
 
 const root=path.resolve(__dirname,'public');
 const origin=(env.SITE_URL||'http://127.0.0.1:5190').replace(/\/$/,'');
@@ -21,7 +22,7 @@ const escape=(value:any)=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;',
 const rate=new Map<string,{count:number;until:number}>();
 function limited(key:string,max:number,ms:number){const now=Date.now();if(rate.size>10000)for(const [k,v]of rate)if(v.until<now)rate.delete(k);const entry=rate.get(key);if(!entry||entry.until<now){rate.set(key,{count:1,until:now+ms});return false;}return ++entry.count>max;}
 async function adminRequest(req:Request,ip:string){
- if(req.method==='GET')return admin.GET(req);
+ if(req.method==='GET'){const response=await admin.GET(req);if(!response.ok)return response;const data=await response.json() as any;return Response.json({...data,exportUrl:data.role==='admin'?'/api/admin/export':null});}
  if(!sameOrigin(req)||!req.headers.get('origin'))return Response.json({error:'Недопустимый источник'},{status:403});
  const body=await req.clone().json() as any;
  if(body.action==='login'&&limited('login:'+ip,10,15*60000))return Response.json({error:'Слишком много попыток. Повторите через 15 минут.'},{status:429});
@@ -40,6 +41,7 @@ async function handle(req:Request,ip:string):Promise<Response>{
  const url=new URL(req.url),pathname=decodeURIComponent(url.pathname).replace(/\/$/,'')||'/';
  if(pathname==='/healthz')return Response.json({ok:true});
  if(pathname.startsWith('/api/')||pathname.startsWith('/media/')){
+  if(pathname==='/api/admin/export'&&req.method==='GET'){if(await adminRole(req)!=='admin')return Response.json({error:'Нет доступа'},{status:403});audit('export','leads','admin');return exportLeads();}
   if(pathname==='/api/admin'&&['GET','POST'].includes(req.method))return adminRequest(req,ip);
   if(pathname==='/api/media'&&req.method==='POST')return upload.POST(req);
   if(pathname.startsWith('/media/')&&['GET','HEAD'].includes(req.method))return media.GET(req,{params:Promise.resolve({key:pathname.slice(7)})});
@@ -82,8 +84,10 @@ export const server=createServer(async(incoming,outgoing)=>{
   outgoing.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self'; connect-src 'self'; frame-src https://maps.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'");
   if((incoming.url||'').startsWith('/api/')||(incoming.url||'').startsWith('/admin')){outgoing.setHeader('Cache-Control','no-store');outgoing.setHeader('X-Robots-Tag','noindex, nofollow');}
   else if(result.headers.get('Content-Type')?.includes('text/html'))outgoing.setHeader('Cache-Control','no-cache');
-  result.headers.forEach((value,key)=>outgoing.setHeader(key,value));outgoing.writeHead(result.status);outgoing.end(incoming.method==='HEAD'?undefined:Buffer.from(await result.arrayBuffer()));
- }catch{outgoing.writeHead(500,{'Content-Type':'text/plain; charset=utf-8'});outgoing.end('Сервис временно недоступен. Пожалуйста, позвоните в шоурум.');}
+  result.headers.forEach((value,key)=>outgoing.setHeader(key,value));outgoing.writeHead(result.status);
+  if(incoming.method==='HEAD'){await result.body?.cancel();outgoing.end();return;}
+  if(result.body)for await(const chunk of result.body as any){if(!outgoing.write(Buffer.from(chunk)))await once(outgoing,'drain');}outgoing.end();
+ }catch{if(outgoing.headersSent){outgoing.destroy();return;}outgoing.writeHead(500,{'Content-Type':'text/plain; charset=utf-8'});outgoing.end('Сервис временно недоступен. Пожалуйста, позвоните в шоурум.');}
 });
 server.requestTimeout=30000;
 server.listen(Number(process.env.PORT)||5190,'0.0.0.0',()=>console.log('Formula Elegantnosti server ready'));

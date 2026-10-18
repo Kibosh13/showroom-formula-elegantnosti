@@ -29,3 +29,9 @@ export const env:any={...config,DB:{prepare:(sql:string)=>new Statement(sql)},BU
 if(!env.ADMIN_PASSWORD||env.ADMIN_PASSWORD.length<24)throw Error('Set a unique ADMIN_PASSWORD of at least 24 characters in the private configuration.');
 export function audit(action:string,entity:string,role:string){database.prepare('INSERT INTO audit(action,entity,role,created_at) VALUES(?,?,?,?)').run(action,entity,role,new Date().toISOString());}
 export function backup(){const filename='backup-'+new Date().toISOString().replace(/[:.]/g,'-')+'.sqlite';database.exec('VACUUM INTO '+"'"+path.join(dataDir,filename).replace(/'/g,"''")+"'");return filename;}
+export function exportLeads(){
+ const encoder=new TextEncoder(),iterator=database.prepare('SELECT * FROM leads ORDER BY created_at DESC').iterate();
+ const cell=(v:any)=>{let text=String(v??'');if(/^[=+@\-\t\r]/.test(text))text="'"+text;return '"'+text.replace(/"/g,'""')+'"';};
+ const stream=new ReadableStream({start(controller){controller.enqueue(encoder.encode('\ufeffДата;Тип;Имя;Телефон;Статус;Контекст;Комментарий;Источник;Страница;UTM\n'));},pull(controller){let chunk='';for(let i=0;i<100;i++){const next=iterator.next();if(next.done){if(chunk)controller.enqueue(encoder.encode(chunk));controller.close();return;}const row=next.value as any,p=JSON.parse(row.payload);chunk+=[row.created_at,row.kind,row.name,row.phone,row.status,p.context,p.comment,p.source,p.pageUrl,JSON.stringify(p.utm||{})].map(cell).join(';')+'\n';}controller.enqueue(encoder.encode(chunk));},cancel(){iterator.return?.();}});
+ return new Response(stream,{headers:{'Content-Type':'text/csv; charset=utf-8','Content-Disposition':'attachment; filename="formula-leads.csv"','Cache-Control':'no-store','X-Robots-Tag':'noindex, nofollow'}});
+}

@@ -4,6 +4,7 @@ import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {randomBytes} from 'node:crypto';
 import {spawn} from 'node:child_process';
+import {DatabaseSync} from 'node:sqlite';
 const dir=await mkdtemp(path.join(tmpdir(),'formula-engine-'));
 const origin='http://127.0.0.1:5193',adminKey=randomBytes(32).toString('hex'),contentKey=randomBytes(32).toString('hex');
 await writeFile(path.join(dir,'config.json'),JSON.stringify({ADMIN_PASSWORD:adminKey,CONTENT_PASSWORD:contentKey,SITE_URL:origin,SITE_INDEXING:'enabled'}),{mode:0o600});
@@ -14,7 +15,7 @@ let cookie='';
 async function call(url,body,{keyCookie=cookie,foreign=false}={}){return fetch(origin+url,{method:body?'POST':'GET',headers:{'Content-Type':'application/json',Origin:foreign?'https://foreign.test':origin,...(keyCookie?{Cookie:keyCookie}:{})},...(body?{body:JSON.stringify(body)}:{})});}
 try{
  await start();
- assert.equal((await call('/api/admin')).status,401);
+ assert.equal((await call('/api/admin')).status,401);assert.equal((await call('/api/admin/export')).status,403);
  assert.equal((await call('/api/admin',{action:'login',key:'wrong'})).status,401);
  assert.equal((await call('/api/admin',{action:'login',key:adminKey},{foreign:true})).status,403);
  let login=await call('/api/admin',{action:'login',key:adminKey});assert.equal(login.status,200);cookie=login.headers.get('set-cookie').split(';')[0];assert.match(login.headers.get('set-cookie'),/HttpOnly/);assert.match(login.headers.get('set-cookie'),/SameSite=Strict/);
@@ -45,10 +46,14 @@ try{
  assert.match(await(await call('/reviews')).text(),/Тестовый отзыв/);
  const form=new FormData();form.append('file',new Blob(['not an image'],{type:'image/jpeg'}),'bad.jpg');const invalidUpload=await fetch(origin+'/api/media',{method:'POST',headers:{Cookie:cookie,Origin:origin},body:form});assert.equal(invalidUpload.status,503);
  const image=await readFile('public/images/showroom/makeup-room.webp');const goodForm=new FormData();goodForm.append('file',new Blob([image],{type:'image/webp'}),'room.webp');const uploaded=await fetch(origin+'/api/media',{method:'POST',headers:{Cookie:cookie,Origin:origin},body:goodForm});assert.equal(uploaded.status,200);const mediaUrl=(await uploaded.json()).url;assert.equal((await call(mediaUrl)).headers.get('content-type'),'image/webp');
+ const bulkDb=new DatabaseSync(path.join(dir,'site.sqlite'));bulkDb.exec('PRAGMA busy_timeout=5000');const insert=bulkDb.prepare('INSERT INTO leads(id,kind,name,phone,payload,status,created_at,notification) VALUES(?,?,?,?,?,?,?,?)');for(let i=0;i<150;i++)insert.run('bulk-'+i,'fitting',i===149?'=HYPERLINK("test")':'Тест массовой выгрузки '+i,'+79001234567',JSON.stringify({context:'bulk export',comment:'bulk'}),'Новая',new Date().toISOString(),'Не подключены');bulkDb.close();
+ const page=await(await call('/api/admin?offset=100&q=bulk')).json();assert.equal(page.leadTotal,150);assert.equal(page.leads.length,50);
+ const russianSearch=await(await call('/api/admin?q='+encodeURIComponent('тест массовой выгрузки'))).json();assert.equal(russianSearch.leadTotal,149);
+ const exported=await call('/api/admin/export');assert.equal(exported.status,200);assert.match(exported.headers.get('content-disposition'),/attachment/);const csv=await exported.text();assert.ok(csv.includes('Тест массовой выгрузки 0'));assert.ok(csv.includes('Тест массовой выгрузки 148'));assert.ok(csv.includes('"\'=HYPERLINK'));
  assert.equal((await call('/api/admin',{action:'backup'})).status,200);
- login=await call('/api/admin',{action:'login',key:contentKey});cookie=login.headers.get('set-cookie').split(';')[0];data=await(await call('/api/admin')).json();assert.equal(data.role,'content');assert.deepEqual(data.leads,[]);
+ login=await call('/api/admin',{action:'login',key:contentKey});cookie=login.headers.get('set-cookie').split(';')[0];data=await(await call('/api/admin')).json();assert.equal(data.role,'content');assert.deepEqual(data.leads,[]);assert.equal((await call('/api/admin/export')).status,403);
  assert.equal((await call('/api/admin',{action:'save',kind:'settings',id:'settings',payload:settings})).status,403);assert.equal((await call('/api/admin',{action:'backup'})).status,403);assert.equal((await call('/api/admin',{action:'save',kind:'product',id:'settings',payload:{...product,id:'settings'}})).status,400);
  await stop();await start();
- login=await call('/api/admin',{action:'login',key:adminKey});cookie=login.headers.get('set-cookie').split(';')[0];data=await(await call('/api/admin')).json();assert.equal(data.settings.intro,settings.intro);assert.equal(data.leads.find(l=>l.id===leadId).status,'Подтверждена');assert.ok(data.products.find(p=>p.id===product.id));assert.equal((await call(mediaUrl)).status,200);
+ login=await call('/api/admin',{action:'login',key:adminKey});cookie=login.headers.get('set-cookie').split(';')[0];data=await(await call('/api/admin')).json();assert.equal(data.settings.intro,settings.intro);const persistedLeads=await(await call('/api/admin?q='+encodeURIComponent('Проверка движка'))).json();assert.equal(persistedLeads.leads.find(l=>l.id===leadId).status,'Подтверждена');assert.ok(data.products.find(p=>p.id===product.id));assert.equal((await call(mediaUrl)).status,200);
  console.log('Production integration checks passed: real SQLite persistence/restart, admin and editor roles, Origin checks, product archive/restore, CMS text/pages/SEO, escaped content, lead CRM, review moderation, verified uploads, private backups and indexing.');
 }finally{await stop();await rm(dir,{recursive:true,force:true});}
