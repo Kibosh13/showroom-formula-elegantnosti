@@ -15,9 +15,17 @@ export async function sendLeadNotifications(config:NotificationConfig,lead:LeadN
  const connected=notificationConfiguration(config),states:string[]=[],message=leadMessage(lead);
  if(connected.telegram){
   try{
-   const response=await request(`https://api.telegram.org/bot${config.TELEGRAM_BOT_TOKEN}/sendMessage`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:config.TELEGRAM_CHAT_ID,text:message}),signal:AbortSignal.timeout(5000)});
-   const result=await response.json() as {ok?:boolean};
-   states.push(response.ok&&result.ok===true?'Telegram отправлен':'Ошибка Telegram');
+   let destination=config.TELEGRAM_CHAT_ID;
+   for(let attempt=0;attempt<2;attempt++){
+    const response=await request(`https://api.telegram.org/bot${config.TELEGRAM_BOT_TOKEN}/sendMessage`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:destination,text:message}),signal:AbortSignal.timeout(5000)});
+    const result=await response.json() as {ok?:boolean;error_code?:number;parameters?:{migrate_to_chat_id?:number}};
+    if(response.ok&&result.ok===true){config.TELEGRAM_CHAT_ID=destination;states.push('Telegram отправлен');break;}
+    const migrated=result.parameters?.migrate_to_chat_id;
+    // Telegram supplies the replacement ID when a group becomes a supergroup.
+    // Follow only that authenticated API response, once; never loop on errors.
+    if(attempt===0&&response.status===400&&result.error_code===400&&typeof migrated==='number'&&Number.isSafeInteger(migrated)&&migrated<0&&String(migrated)!==String(destination)){destination=String(migrated);continue;}
+    states.push('Ошибка Telegram');break;
+   }
   }catch{states.push('Ошибка Telegram');}
  }
  if(connected.email){

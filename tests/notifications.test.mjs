@@ -21,4 +21,16 @@ for(const kind of ['discount','fitting','certificate']){
  assert.equal(await sendLeadNotifications(config,lead,async()=>Response.json({ok:false},{status:403})),'Ошибка Telegram; Ошибка Email');
  assert.ok(leadMessage({...lead,payload:{comment:'Я'.repeat(8000)}}).length<=4000);
 }
+const telegramOnly={TELEGRAM_BOT_TOKEN:'test-only-token',TELEGRAM_CHAT_ID:'-123'};
+const migrationLead={id:'migration-test',kind:'fitting',name:'Тест смены группы',phone:'+79001234567',payload:{}};
+const destinations=[];
+assert.equal(await sendLeadNotifications(telegramOnly,migrationLead,async(url,options)=>{
+ destinations.push(JSON.parse(options.body).chat_id);
+ return destinations.length===1?Response.json({ok:false,error_code:400,parameters:{migrate_to_chat_id:-100123}},{status:400}):Response.json({ok:true});
+}),'Telegram отправлен');
+assert.deepEqual(destinations,['-123','-100123']);assert.equal(telegramOnly.TELEGRAM_CHAT_ID,'-100123');
+let attempts=0;
+assert.equal(await sendLeadNotifications(telegramOnly,migrationLead,async()=>{attempts++;return Response.json({ok:false,error_code:400,parameters:{migrate_to_chat_id:-100456}},{status:400});}),'Ошибка Telegram');assert.equal(attempts,2);
+attempts=0;
+assert.equal(await sendLeadNotifications(telegramOnly,migrationLead,async()=>{attempts++;return Response.json({ok:false,error_code:400,parameters:{migrate_to_chat_id:12345}},{status:400});}),'Ошибка Telegram');assert.equal(attempts,1);
 console.log('Notification checks passed: popup, booking and certificate payloads, recipient routing, missing credentials and provider failures. No external messages sent.');
