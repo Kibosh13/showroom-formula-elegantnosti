@@ -1,6 +1,7 @@
 import { env } from 'cloudflare:workers';
 import {db,loadStore,saveEntity} from '../../store';
 import {normalizePhone,sanitizeAttribution} from '../../popup-policy';
+import {sendLeadNotifications} from '../../notifications';
 export async function POST(req:Request){
  try {
   if(req.headers.get('origin')&&req.headers.get('origin')!==new URL(req.url).origin)return Response.json({error:'Недопустимый источник запроса'},{status:403});
@@ -24,10 +25,8 @@ export async function POST(req:Request){
   const id=crypto.randomUUID();
   await db().prepare('INSERT INTO leads(id,kind,name,phone,payload,status,created_at,notification) VALUES(?,?,?,?,?,?,?,?)').bind(id,b.kind,name,phone,JSON.stringify(payload),'Новая',new Date().toISOString(),'Не подключены').run();
   if(b.kind==='review')await saveEntity(id,'review',{name,rating:Math.min(5,Math.max(1,Number(b.rating)||5)),text:String(b.comment||'').slice(0,2000),published:false});
-  const e=env as any;const states:string[]=[];const message=`Формула Элегантности\nНовая заявка: ${b.kind}\n${name}\n${phone}\n${payload.context}\nИсточник: ${payload.source}\nСтраница: ${payload.pageUrl}\n${payload.date} ${payload.time}\nСвязь: ${payload.channel}\n${payload.comment}`;
-  if(e.TELEGRAM_BOT_TOKEN&&e.TELEGRAM_CHAT_ID){try{const r=await fetch(`https://api.telegram.org/bot${e.TELEGRAM_BOT_TOKEN}/sendMessage`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:e.TELEGRAM_CHAT_ID,text:message}),signal:AbortSignal.timeout(5000)});states.push(r.ok?'Telegram отправлен':'Ошибка Telegram');}catch{states.push('Ошибка Telegram');}}
-  if(e.RESEND_API_KEY&&e.NOTIFICATION_EMAIL&&e.NOTIFICATION_FROM){try{const r=await fetch('https://api.resend.com/emails',{method:'POST',headers:{'Authorization':`Bearer ${e.RESEND_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({from:e.NOTIFICATION_FROM,to:e.NOTIFICATION_EMAIL,subject:'Новая заявка — Формула Элегантности',text:message}),signal:AbortSignal.timeout(5000)});states.push(r.ok?'Email отправлен':'Ошибка Email');}catch{states.push('Ошибка Email');}}
-  if(states.length)await db().prepare('UPDATE leads SET notification=? WHERE id=?').bind(states.join('; '),id).run();
+  const notification=await sendLeadNotifications(env as any,{id,kind:b.kind,name,phone,payload});
+  await db().prepare('UPDATE leads SET notification=? WHERE id=?').bind(notification,id).run();
   return Response.json({ok:true,id,reference:id.slice(0,8).toUpperCase()});
  } catch {return Response.json({error:'Заявка не отправлена. Попробуйте ещё раз или позвоните нам.'},{status:503});}
 }

@@ -15,6 +15,7 @@
     "build:demo": "node scripts/build-demo.mjs",
     "preview:demo": "vite preview --config demo/vite.config.ts --host 127.0.0.1",
     "test:popup": "node scripts/test-popup.mjs",
+    "test:notifications": "node tests/notifications.test.mjs",
     "build:production": "node scripts/build-production.mjs",
     "test:production": "node scripts/build-production.mjs && node tests/production.test.mjs"
   },

@@ -19,7 +19,7 @@ try{
  assert.equal((await call('/api/admin',{action:'login',key:'wrong'})).status,401);
  assert.equal((await call('/api/admin',{action:'login',key:adminKey},{foreign:true})).status,403);
  let login=await call('/api/admin',{action:'login',key:adminKey});assert.equal(login.status,200);cookie=login.headers.get('set-cookie').split(';')[0];assert.match(login.headers.get('set-cookie'),/HttpOnly/);assert.match(login.headers.get('set-cookie'),/SameSite=Strict/);
- let data=await(await call('/api/admin')).json();assert.equal(data.products.length,101);
+ let data=await(await call('/api/admin')).json();assert.equal(data.products.length,101);assert.deepEqual(data.notifications,{telegram:false,email:false});
  const product={...data.products[0],id:'engine-test-item',name:'ТЕСТ CMS',price:17800,demo:false,published:true,gallery:[data.products[0].image]};
  assert.equal((await call('/api/admin',{action:'save',kind:'product',id:product.id,payload:product})).status,200);
  assert.match(await(await call('/product/'+product.id)).text(),/ТЕСТ CMS/);
@@ -39,6 +39,10 @@ try{
  assert.equal((await call('/api/leads',body,{foreign:true})).status,403);
  const lead=await call('/api/leads',body);assert.equal(lead.status,200);const leadId=(await lead.json()).id;
  data=await(await call('/api/admin')).json();assert.ok(data.leads.find(l=>l.id===leadId));
+ for(const kind of ['discount','certificate']){
+  const result=await call('/api/leads',{...body,kind,phone:'+79001234568',amount:15000});assert.equal(result.status,200);const saved=(await result.json()).id;
+  const updated=await(await call('/api/admin')).json();assert.equal(updated.leads.find(l=>l.id===saved).notification,'Не подключены');
+ }
  assert.equal((await call('/api/admin',{action:'lead',id:leadId,status:'Подтверждена'})).status,200);
  const review=await call('/api/leads',{...body,kind:'review',comment:'Тестовый отзыв',rating:5});assert.equal(review.status,200);
  assert.doesNotMatch(await(await call('/reviews')).text(),/Тестовый отзыв/);
